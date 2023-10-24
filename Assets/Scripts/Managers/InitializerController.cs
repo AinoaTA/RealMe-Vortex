@@ -9,6 +9,16 @@ public class InitializerController : MonoBehaviour
     [Tooltip("Add in order of execution (Start)")]
     [SerializeField] private GameObject[] ObjectToInitializeStart;
 
+    private void Awake()
+    {
+        AllAwake();
+    } 
+
+    private void Start()
+    {
+        AllStart();
+    }
+
     public void InitializeAwake()
     {
         AllAwake();
