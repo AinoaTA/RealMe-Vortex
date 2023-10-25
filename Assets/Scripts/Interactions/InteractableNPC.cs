@@ -1,39 +1,33 @@
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 namespace NPC
 {
-    [RequireComponent(typeof(CircleCollider2D))]
-    public class InteractableNPC : Interactable
+    public class InteractableNPC : NearInteraction
     {
         [SerializeField] private EnumsData.CharacterProfile _character;
 
-        private ReadInteraction _interaction = new();
-        private GameObject _interactionPanel;
+        private DialogueSystemTrigger _dialogue;
 
-        private void Awake()
+        protected override void Awake()
         {
-            _interactionPanel = _interaction.GetInteractionObject("interaction");
-            _interactionPanel.transform.position = transform.position + Vector3.up;
-            _interactionPanel.SetActive(false);
+            base.Awake();
+
+            TryGetComponent(out _dialogue);
         }
 
         public override void Interact()
         {
             Debug.Log("NPC: " + _character);
-            Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.INTERACTING);
-            _interactionPanel.SetActive(false); 
+            Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
+            _interactionPanel.SetActive(false);
+
+            DialogueManager.StartConversation(_dialogue.conversation);
         }
 
-        public void OnTriggerEnter2D(Collider2D collision)
+        public override void ExitInteraction()
         {
-            if (collision.CompareTag("Player"))
-                _interactionPanel.SetActive(true);
-        }
-
-        public void OnTriggerExit2D(Collider2D collision)
-        {
-            if (collision.CompareTag("Player"))
-                _interactionPanel.SetActive(false);
+            _interactionPanel.SetActive(_playerIsNear);
         }
     }
 }

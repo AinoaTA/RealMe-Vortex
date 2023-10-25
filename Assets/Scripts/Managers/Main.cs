@@ -5,6 +5,9 @@ public class Main : MonoBehaviour
     public static Main instance;
 
     public GameFlow GameStatus { get; set; }
+    public Inventory Inventory { get => _inventory; private set => _inventory = value; }
+
+    [SerializeField] private Inventory _inventory;
 
     private void Awake()
     {
@@ -20,5 +23,5 @@ public class Main : MonoBehaviour
         }
 
         GameStatus = new(EnumsData.GameFlow.GAMEPLAY);
-    } 
+    }
 }

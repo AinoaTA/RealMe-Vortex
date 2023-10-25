@@ -10,6 +10,14 @@ public class GameManager : MonoBehaviour
     public UIManager UIManager { get => _uiManager; }
     [SerializeField] private UIManager _uiManager;
 
+    public Interactable CurrentInUse { get; set; }
+
+    public void ExitCurrentInteraction() 
+    {
+        CurrentInUse.ExitInteraction();
+        Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
+    }
+
     private void Awake()
     {
         Instance = this; 

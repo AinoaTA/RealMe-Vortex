@@ -13,7 +13,6 @@ public class GameFlow
 
     public void UpdateFlow(EnumsData.GameFlow newState)
     {
-        _gameFlow = newState;
-
+        _gameFlow = newState; 
     } 
-}
+} 

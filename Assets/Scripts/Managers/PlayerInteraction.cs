@@ -11,15 +11,23 @@ namespace Player
 
         public void OnInteract()
         {
-            if (Main.instance.GameStatus.Status == EnumsData.GameFlow.INTERACTING)
-            {
-                Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
-                return;
-            }
+            //if (Main.instance.GameStatus.Status == EnumsData.GameFlow.INTERACTING)
+            //{
+                //Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
+                //if (GameManager.Instance.CurrentInUse != null)
+                //{ 
+                //    Debug.Log("Exit Interaction");
+                //    GameManager.Instance.CurrentInUse.ExitInteraction();
+                //    GameManager.Instance.CurrentInUse = null;
+                //retun;
+                //}
+
+                //return;
+            //}
 
             if (Main.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
-             
-             Debug.Log("Interacting");
+
+            Debug.Log("Interacting");
 
             List<Collider2D> detections = Physics2D.OverlapCircleAll(transform.position, _areaDetection, _interactableLayer).ToList();
 
@@ -27,7 +35,7 @@ namespace Player
 
             Collider2D detected = detections[0];
             float dist = Vector2.Distance(detected.transform.position, transform.position);
-             
+
             detections.ForEach(n =>
             {
                 float newDist = Vector2.Distance(n.transform.position, transform.position);
@@ -38,8 +46,12 @@ namespace Player
                 }
             });
 
-            detected.TryGetComponent(out Interactable obj); 
-            obj.Interact();
+            detected.TryGetComponent(out Interactable obj);
+
+            GameManager.Instance.CurrentInUse = obj;
+            GameManager.Instance.CurrentInUse.Interact();
+
+            Debug.Log(detected==null);
         }
     }
 }

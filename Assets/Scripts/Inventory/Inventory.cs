@@ -1,18 +1,45 @@
 using System.Collections.Generic;
-using UnityEngine;
-using System.Linq;
+using UnityEngine; 
 
 public class Inventory : MonoBehaviour
 {
-    public List<InventoryData> items = new();
+    public static Inventory instance;
+     
+    public List<InventoryData> Items { get => _items; private set => _items = value; }
+
+    [SerializeField] private List<InventoryData> _items = new();
+
+    private void OnEnable()
+    {
+        GrabObject.OnGrab += AddItem;
+    }
+
+    private void OnDisable()
+    {
+        GrabObject.OnGrab -= AddItem;
+    }
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     public void AddItem(Item item, int quantity = 1)
     {
-        InventoryData id = items.Find((n) => n.item == item);
+        InventoryData id = Items.Find((n) => n.item == item);
 
         if (id == null)
         {
-            items.Add(new(item, quantity));
+            Items.Add(new(item, quantity));
         }
         else
         {
@@ -22,11 +49,12 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(Item item, int quantity)
     {
-        if (CheckItem(item, quantity)) 
+        if (CheckItem(item, quantity))
         {
-            items.Find((n) => n.item == item).RemoveQuantity(quantity);
-        } 
+            Items.Find((n) => n.item == item).RemoveQuantity(quantity);
+        }
     }
+
 
     /// <summary>
     /// Check if player has the item with required quantity
@@ -34,7 +62,7 @@ public class Inventory : MonoBehaviour
     /// <returns></returns>
     public bool CheckItem(Item item, int quantity)
     {
-        InventoryData id = items.Find((n) => n.item == item);
+        InventoryData id = Items.Find((n) => n.item == item);
 
         if (id != null)
         {
@@ -42,33 +70,5 @@ public class Inventory : MonoBehaviour
         }
 
         return false;
-    }
-}
-
-[System.Serializable]
-public class InventoryData
-{
-    public Item item { get; private set; }
-    public int quantity { get; private set; }
-
-    public InventoryData(Item item, int quantity)
-    {
-        this.item = item;
-        this.quantity = quantity;
-    }
-
-    public bool CheckQuantity(float checkQuantity)
-    {
-        return quantity >= checkQuantity;
-    }
-
-    public void AddQuantity(int quantity)
-    {
-        this.quantity += quantity;
-    }
-
-    public void RemoveQuantity(int quantity)
-    {
-        this.quantity -= quantity;
     }
 }
