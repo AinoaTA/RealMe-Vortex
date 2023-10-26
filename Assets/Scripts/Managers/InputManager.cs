@@ -1,49 +1,77 @@
-using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    public delegate void DelegateMovement(Vector2 axis);
-    public static DelegateMovement Movement;
 
-    public delegate void DelegatePause();
-    public static DelegatePause Pause;
+    public delegate void DelegateMove(Vector2 vector);
+    public static DelegateMove OnMoveDelegate;
 
-    public void OnMovement(InputAction.CallbackContext obj)
+    public delegate void DelegateInteraction();
+    public static DelegateInteraction OnInteraction;
+
+    public delegate void DelegateInventory();
+    public static DelegateInventory OnOpenInventory;
+
+    private PlayerInput _playerInput;
+
+    public delegate void DelegateExitInventory();
+    public static DelegateExitInventory OnInventoryExit;
+
+    private void Awake()
     {
-        switch (obj.phase)
-        {
-            case InputActionPhase.Disabled:
-                break;
-            case InputActionPhase.Waiting:
-                break;
-            case InputActionPhase.Started:
-                Movement?.Invoke(obj.ReadValue<Vector2>());
+        TryGetComponent(out _playerInput);
+    }
 
+    public void OnMove(InputAction.CallbackContext ctx)
+    {
+        switch (ctx.phase)
+        {
+            case InputActionPhase.Started:
+                OnMoveDelegate?.Invoke(ctx.ReadValue<Vector2>().normalized);
                 break;
-            case InputActionPhase.Performed:
-                break;
+
             case InputActionPhase.Canceled:
+            case InputActionPhase.Disabled:
+                OnMoveDelegate?.Invoke(Vector2.zero);
                 break;
         }
     }
 
-    public void OnPause(InputAction.CallbackContext obj)
+    public void OnInteract(InputAction.CallbackContext ctx)
     {
-        switch (obj.phase)
+        switch (ctx.phase)
         {
-            case InputActionPhase.Disabled:
-                break;
-            case InputActionPhase.Waiting:
-                break;
             case InputActionPhase.Started:
-                Pause?.Invoke();
-
-                break;
-            case InputActionPhase.Performed:
-                break;
-            case InputActionPhase.Canceled:
+                OnInteraction?.Invoke();
                 break;
         }
     }
+
+    public void OnInventory(InputAction.CallbackContext ctx)
+    {
+        switch (ctx.phase)
+        {
+            case InputActionPhase.Started:
+                _playerInput.SwitchCurrentActionMap("Menu");
+                OnOpenInventory?.Invoke();
+                break;
+        }
+    }
+
+    #region Menu
+
+    public void OnExitInventory(InputAction.CallbackContext ctx)
+    {
+        switch (ctx.phase)
+        {
+            case InputActionPhase.Started:
+                _playerInput.SwitchCurrentActionMap("Gameplay");
+
+                OnInventoryExit?.Invoke();
+                break;
+        }
+    }
+
+    #endregion
 }

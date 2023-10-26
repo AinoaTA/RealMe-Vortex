@@ -18,8 +18,15 @@ public class InventoryInfoUI : MonoBehaviour
         InventoryItemUI.OnSendInfo -= UpdateInfo; 
     }
 
+    private void Start()
+    {
+        _image.color = new(1,1,1,0);
+    }
+
     private void UpdateInfo(Item item)
     {
+        _image.color = new(1, 1, 1, 1);
+
         _image.sprite = item.Sprite;
         _name.text = item.ObjectName;
         _info.text = item.InfoText;

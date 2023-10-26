@@ -110,7 +110,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1496766011430209337}
           m_TargetAssemblyTypeName: InventoryItemUI, Assembly-CSharp
-          m_MethodName: SendInfo
+          m_MethodName: OnInventory
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -126,7 +126,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1496766011430209337}
           m_TargetAssemblyTypeName: InventoryItemUI, Assembly-CSharp
-          m_MethodName: SendInfo
+          m_MethodName: OnInventory
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

@@ -9,22 +9,18 @@ namespace Player
         [SerializeField] private float _areaDetection = 5f;
         [SerializeField] private LayerMask _interactableLayer;
 
-        public void OnInteract()
+        private void OnEnable()
         {
-            //if (Main.instance.GameStatus.Status == EnumsData.GameFlow.INTERACTING)
-            //{
-                //Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
-                //if (GameManager.Instance.CurrentInUse != null)
-                //{ 
-                //    Debug.Log("Exit Interaction");
-                //    GameManager.Instance.CurrentInUse.ExitInteraction();
-                //    GameManager.Instance.CurrentInUse = null;
-                //retun;
-                //}
+            InputManager.OnInteraction += OnInteract;
+        }
 
-                //return;
-            //}
+        private void OnDisable()
+        {
+            InputManager.OnInteraction -= OnInteract;
+        } 
 
+        public void OnInteract()
+        {  
             if (Main.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
 
             Debug.Log("Interacting");

@@ -10,6 +10,16 @@ namespace Player
         private Vector2 _movement;
         private Rigidbody2D _rb;
 
+        private void OnEnable()
+        {
+            InputManager.OnMoveDelegate += OnMove;
+        }
+
+        private void OnDisable()
+        {
+            InputManager.OnMoveDelegate -= OnMove;
+        }
+
         private void Awake()
         {
             TryGetComponent(out _rb);
@@ -17,9 +27,9 @@ namespace Player
 
         #region input reader
 
-        private void OnMove(InputValue dir)
-        {
-            _movement = dir.Get<Vector2>();
+        private void OnMove(Vector2 dir)
+        { 
+            _movement = dir;
         }
 
         #endregion

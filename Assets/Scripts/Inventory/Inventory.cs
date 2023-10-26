@@ -35,7 +35,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item, int quantity = 1)
     {
-        InventoryData id = Items.Find((n) => n.item == item);
+        InventoryData id = Items.Find((n) => n.Item == item);
 
         if (id == null)
         {
@@ -51,7 +51,7 @@ public class Inventory : MonoBehaviour
     {
         if (CheckItem(item, quantity))
         {
-            Items.Find((n) => n.item == item).RemoveQuantity(quantity);
+            Items.Find((n) => n.Item == item).RemoveQuantity(quantity);
         }
     }
 
@@ -62,7 +62,7 @@ public class Inventory : MonoBehaviour
     /// <returns></returns>
     public bool CheckItem(Item item, int quantity)
     {
-        InventoryData id = Items.Find((n) => n.item == item);
+        InventoryData id = Items.Find((n) => n.Item == item);
 
         if (id != null)
         {

@@ -1,30 +1,30 @@
 [System.Serializable]
 public class InventoryData
 {
-    public Item item { get => _item; private set => _item = value; }
+    public Item Item { get => _item; private set => _item = value; }
     public Item _item;
 
-    public int quantity { get => _quantity; private set => _quantity = value; }
+    public int Quantity { get => _quantity; private set => _quantity = value; }
     public int _quantity;
 
     public InventoryData(Item item, int quantity)
     {
-        this.item = item;
-        this.quantity = quantity;
+        this.Item = item;
+        this.Quantity = quantity;
     }
 
     public bool CheckQuantity(float checkQuantity)
     {
-        return quantity >= checkQuantity;
+        return Quantity >= checkQuantity;
     }
 
     public void AddQuantity(int quantity)
     {
-        this.quantity += quantity;
+        this.Quantity += quantity;
     }
 
     public void RemoveQuantity(int quantity)
     {
-        this.quantity -= quantity;
+        this.Quantity -= quantity;
     }
 }

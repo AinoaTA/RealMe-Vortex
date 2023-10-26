@@ -5,20 +5,20 @@ public class InventoryItemUI : MonoBehaviour
 {
     [SerializeField] private Image _spriteRenderer;
 
-    private Item _itemReference;
+    public Item ItemRenference { get; private set; }
 
     public delegate void DelegateSendInfo(Item item);
     public static DelegateSendInfo OnSendInfo;
   
     public void Load(Item it)
     {
-        _itemReference = it;
+        ItemRenference = it;
         _spriteRenderer.sprite = it.Sprite;
     }
 
-    public void SendInfo()
-    {
-        if (_itemReference != null) //just in case.
-            OnSendInfo?.Invoke(_itemReference);
-    } 
+    public void OnInventory()
+    { 
+        if (ItemRenference != null) //just in case.
+            OnSendInfo?.Invoke(ItemRenference);
+    }
 }
