@@ -1,7 +1,7 @@
 using UnityEngine;
 public interface IInitialize
 {
-    public void InitializeAwake() { }
+    public abstract void InitializeAwake();
 
     public void InitializeStart() { }
 }

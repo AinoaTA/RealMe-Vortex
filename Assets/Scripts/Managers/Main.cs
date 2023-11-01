@@ -24,4 +24,9 @@ public class Main : MonoBehaviour
 
         GameStatus = new(EnumsData.GameFlow.GAMEPLAY);
     }
+
+    private void Update()
+    {
+        Debug.Log("status game: " + GameStatus.Status);
+    }
 }

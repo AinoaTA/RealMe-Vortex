@@ -22,4 +22,11 @@ public class GameManager : MonoBehaviour
     {
         Instance = this; 
     }
+
+    private void Start()
+    {
+        Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
+    }
+
+    
 }

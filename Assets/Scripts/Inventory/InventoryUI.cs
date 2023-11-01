@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class InventoryUI : MenuParent
 {
     [SerializeField] private InventoryItemUI _UIPrefab;
+    [SerializeField] private InventoryInfoUI _UIinfo;
     [SerializeField] private Transform _content;
     [SerializeField] private List<Item> _allItemsToLoad = new();
 
@@ -48,7 +49,9 @@ public class InventoryUI : MenuParent
         Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.MENU);
 
         UIManager.instance.ChangeMenu(Type);
-         
+
+        _UIinfo.ResetInfo();
+
         base.Open();
     }
 }

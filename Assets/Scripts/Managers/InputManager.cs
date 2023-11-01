@@ -25,6 +25,7 @@ public class InputManager : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
+        Debug.Log(ctx.phase);
         switch (ctx.phase)
         {
             case InputActionPhase.Started:

@@ -10,17 +10,17 @@ public class InventoryInfoUI : MonoBehaviour
 
     private void OnEnable()
     {
-        InventoryItemUI.OnSendInfo += UpdateInfo; 
+        InventoryItemUI.OnSendInfo += UpdateInfo;
     }
 
     private void OnDisable()
     {
-        InventoryItemUI.OnSendInfo -= UpdateInfo; 
+        InventoryItemUI.OnSendInfo -= UpdateInfo;
     }
 
     private void Start()
     {
-        _image.color = new(1,1,1,0);
+        ResetInfo();
     }
 
     private void UpdateInfo(Item item)
@@ -31,5 +31,12 @@ public class InventoryInfoUI : MonoBehaviour
         _name.text = item.ObjectName;
         _info.text = item.InfoText;
     }
-     
+
+    public void ResetInfo()
+    {
+        _image.color = new(1, 1, 1, 0);
+        _name.ClearMesh();
+        _info.ClearMesh();
+    }
+
 }
