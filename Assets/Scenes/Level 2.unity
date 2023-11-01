@@ -3920,6 +3920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffdcce578af87a419eb5cab2a27e941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigame: 0
   _completed: 0
   _allPieces:
   - {fileID: 1458664960}
@@ -3929,7 +3930,6 @@ MonoBehaviour:
   _gmMinigame: {fileID: 2047308953}
   _startConversation: 
   _endConversation: 
-  _miniGameCompleted: 0
 --- !u!4 &983939355
 Transform:
   m_ObjectHideFlags: 0
@@ -6716,7 +6716,7 @@ GameObject:
   - component: {fileID: 1721495862}
   - component: {fileID: 1721495861}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
