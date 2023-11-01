@@ -1,12 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor;
+using System.Linq;
 
 public class InventoryUI : MenuParent
 {
     [SerializeField] private InventoryItemUI _UIPrefab;
     [SerializeField] private InventoryInfoUI _UIinfo;
     [SerializeField] private Transform _content;
-    [SerializeField] private List<Item> _allItemsToLoad = new();
+    [SerializeField] internal List<Item> _allItemsToLoad = new();
 
     private List<InventoryItemUI> _createdUI = new();
 
@@ -15,14 +17,12 @@ public class InventoryUI : MenuParent
 
     private void OnEnable()
     {
-        if (Application.isEditor) return;
         InputManager.OnOpenInventory += Open;
         InputManager.OnInventoryExit += Close;
     }
 
     private void OnDisable()
     {
-        if (Application.isEditor) return;
         InputManager.OnOpenInventory -= Open;
         InputManager.OnInventoryExit -= Close;
     }
@@ -46,6 +46,8 @@ public class InventoryUI : MenuParent
 
     protected override void Open()
     {
+        if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
+
         _createdUI.ForEach(x => x.gameObject.SetActive(GameManager.instance.Inventory.CheckItem(x.ItemRenference, 1)));
 
         GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.MENU);
@@ -57,3 +59,31 @@ public class InventoryUI : MenuParent
         base.Open();
     }
 }
+
+#if UNITY_EDITOR
+[CustomEditor(typeof(InventoryUI))]
+public class InventoryEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        InventoryUI myTarget = (InventoryUI)target;
+
+        base.OnInspectorGUI();
+
+        GUILayout.Space(20);
+
+        if (GUILayout.Button("Update Inventory SO"))
+        {
+            myTarget._allItemsToLoad.Clear();
+
+            Item[] it = Resources.LoadAll<Item>("Items");
+            //string[] prefabPaths = AssetDatabase.GetAllAssetPaths().Where(path => path.EndsWith(".asset", System.StringComparison.OrdinalIgnoreCase)).ToArray();
+            Debug.Log(it.Length);
+
+            myTarget._allItemsToLoad = it.ToList(); 
+        }
+    }  
+}
+
+
+#endif

@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using UnityEngine; 
+using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
@@ -71,4 +71,4 @@ public class Inventory : MonoBehaviour
 
         return false;
     }
-}
+} 

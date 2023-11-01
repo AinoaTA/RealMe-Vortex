@@ -6,12 +6,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public GameFlow GameStatus { get; set; }
+
     public Inventory Inventory { get => _inventory; private set => _inventory = value; }
+    [SerializeField] private Inventory _inventory;
 
     public List<MinigamesInfo> AllMinigames { get => _allMinigames; private set => _allMinigames = value; }
     [SerializeField]private List<MinigamesInfo> _allMinigames = new();
-
-    [SerializeField] private Inventory _inventory;
 
     private void Awake()
     {
