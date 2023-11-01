@@ -15,12 +15,14 @@ public class InventoryUI : MenuParent
 
     private void OnEnable()
     {
+        if (Application.isEditor) return;
         InputManager.OnOpenInventory += Open;
         InputManager.OnInventoryExit += Close;
     }
 
     private void OnDisable()
     {
+        if (Application.isEditor) return;
         InputManager.OnOpenInventory -= Open;
         InputManager.OnInventoryExit -= Close;
     }

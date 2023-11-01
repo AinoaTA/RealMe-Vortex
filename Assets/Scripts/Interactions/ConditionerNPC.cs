@@ -18,12 +18,15 @@ public class ConditionerNPC : NearInteraction
     public override void Interact()
     {
         Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
+        DialogueManager.StopConversation();
+
         if (_conditioner.CheckCondition())
         {
             _interactionPanel.SetActive(false);
 
             //open the event at the end of the conversation. 
             DialogueMethodsManager.CallBackOnEnd = delegate { _conditioner.DoEvent(); };
+         
             DialogueManager.StartConversation("Carta_good");
         }
         else
