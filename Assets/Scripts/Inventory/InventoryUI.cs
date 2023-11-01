@@ -32,7 +32,7 @@ public class InventoryUI : MenuParent
         _allItemsToLoad.ForEach(n =>
         {
             LoadInfo(n);
-            _createdUI[^1].gameObject.SetActive(Main.instance.Inventory.CheckItem(n, 1));
+            _createdUI[^1].gameObject.SetActive(GameManager.instance.Inventory.CheckItem(n, 1));
 
         });
     }
@@ -46,9 +46,9 @@ public class InventoryUI : MenuParent
 
     protected override void Open()
     {
-        _createdUI.ForEach(x => x.gameObject.SetActive(Main.instance.Inventory.CheckItem(x.ItemRenference, 1)));
+        _createdUI.ForEach(x => x.gameObject.SetActive(GameManager.instance.Inventory.CheckItem(x.ItemRenference, 1)));
 
-        Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.MENU);
+        GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.MENU);
 
         UIManager.instance.ChangeMenu(Type);
 

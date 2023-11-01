@@ -23,7 +23,6 @@ namespace Minigames.Rebuild
             {
                 _inside.Add(collision.gameObject);
             }
-             
 
             if (collision.gameObject.Equals(_target.gameObject))
             {

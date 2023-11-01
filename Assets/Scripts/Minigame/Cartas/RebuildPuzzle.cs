@@ -1,6 +1,7 @@
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
 using System.Linq;
+using System.Collections;
 
 namespace Minigames.Rebuild
 {
@@ -10,7 +11,6 @@ namespace Minigames.Rebuild
         [SerializeField] private Transform _gmMinigame;
         [SerializeField] private string _startConversation;
         [SerializeField] private string _endConversation;
-        [SerializeField] private bool _miniGameCompleted = false;
 
         private Camera _cam;
 
@@ -26,48 +26,59 @@ namespace Minigames.Rebuild
 
         private void CheckAnswers()
         {
-            Debug.Log("updating");
+            if (Completed) return;
+
             for (int i = 0; i < _allPieces.Length; i++)
             {
                 if (!_allPieces[i].Complete)
                 {
-                    _miniGameCompleted = false;
+                    Completed = false;
                     return;
                 }
             }
 
-            Debug.Log("Minigame COMPLETED!!!");
-            _miniGameCompleted = true;  
+            _allPieces.ToList().ForEach(x => x.Block(true));
+
+            Completed = true;
+
+            CompletedPuzzle();
         }
 
         private void Start()
         {
             _cam = Camera.main;
             _gmMinigame.gameObject.SetActive(false);
-
         }
 
-        public override void ClosePuzzle()
+        protected override void ClosePuzzle()
         {
             _gmMinigame.gameObject.SetActive(false);
 
-            Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
+            GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
         }
 
-        public override void CompletedPuzzle()
+        protected override void CompletedPuzzle()
         {
             Completed = true;
+
+            GameManager.instance.ChangeGameStatus(minigame, EnumsData.MiniGameStatus.COMPLETED);
 
             if (_endConversation != "")
             {
                 DialogueManager.StartConversation(_endConversation);
             }
 
-            ClosePuzzle();
+            StartCoroutine(OnCompleteAnimation());
         }
 
-        public override void StartPuzzle()
+        protected override void StartPuzzle()
         {
+            if (Completed)
+            {
+                ClosePuzzle();
+                return;
+            }
+
             if (_startConversation != "")
             {
                 DialogueManager.StartConversation(_startConversation);
@@ -77,6 +88,18 @@ namespace Minigames.Rebuild
             _gmMinigame.position = pos;
 
             _gmMinigame.gameObject.SetActive(true);
+        }
+
+        protected override IEnumerator OnCompleteAnimation()
+        {
+            yield return new WaitForSeconds(1);
+            OnCompleteMinigame?.Invoke();
+            ClosePuzzle();
+        }
+
+        protected override void ResetPuzzle()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

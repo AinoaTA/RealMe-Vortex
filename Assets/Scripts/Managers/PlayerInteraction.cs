@@ -17,11 +17,11 @@ namespace Player
         private void OnDisable()
         {
             InputManager.OnInteraction -= OnInteract;
-        } 
+        }
 
         public void OnInteract()
-        {  
-            if (Main.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
+        {
+            if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
 
             Debug.Log("Interacting");
 
@@ -44,10 +44,10 @@ namespace Player
 
             detected.TryGetComponent(out Interactable obj);
 
-            GameManager.Instance.CurrentInUse = obj;
-            GameManager.Instance.CurrentInUse.Interact();
+            GameController.Instance.CurrentInUse = obj;
+            GameController.Instance.CurrentInUse.Interact();
 
-            Debug.Log(detected==null);
+            Debug.Log(detected == null);
         }
     }
 }

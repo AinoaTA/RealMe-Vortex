@@ -19,7 +19,7 @@ public class MenuParent : MonoBehaviour
 
     protected virtual void Close()
     {
-        Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
+        GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
         UIManager.instance.CloseMenu(Type);
     }
 

@@ -19,7 +19,7 @@ namespace NPC
         public override void Interact()
         {
             Debug.Log("NPC: " + _character);
-            Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
+            GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
             _interactionPanel.SetActive(false);
 
             DialogueManager.StartConversation(_dialogue.conversation);

@@ -5,14 +5,16 @@ namespace Minigames.Rebuild
 {
     public class Piece : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer _sp;
-        private PointerCheck[] _pointers;
-        private int _id;
-
-        private bool _dragging;
-        private Camera _cam;
         public bool Complete { get => _pieceCorrect; private set => _pieceCorrect = value; }
         [SerializeField] private bool _pieceCorrect = false;
+
+        [SerializeField] private SpriteRenderer _sp;
+
+        private PointerCheck[] _pointers;
+        private int _id;
+        private bool _dragging;
+        private bool _block;
+        private Camera _cam;
 
         public delegate void DelegatePiece();
         public static DelegatePiece OnUpdatePiece;
@@ -63,14 +65,21 @@ namespace Minigames.Rebuild
             Complete = true;
         }
 
+        public void Block(bool block)
+        {
+            _block = block;
+        }
+
         #region On_Mouse Events
         public void OnMouseDown()
         {
+            if (_block) return;
             _dragging = true;
         }
 
         public void OnMouseDrag()
         {
+            if (_block) return;
             if (_dragging)
             {
                 Vector3 mousePos = _cam.ScreenToWorldPoint(Input.mousePosition);
@@ -81,6 +90,7 @@ namespace Minigames.Rebuild
 
         public void OnMouseUp()
         {
+            if (_block) return;
             _dragging = false;
 
             OnUpdatePiece?.Invoke();

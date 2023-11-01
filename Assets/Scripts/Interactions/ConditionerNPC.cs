@@ -5,34 +5,37 @@ public class ConditionerNPC : NearInteraction
 {
     [SerializeField] private EnumsData.CharacterProfile _character;
 
-    //private DialogueSystemTrigger _dialogue;
     private Conditioner _conditioner;
+    private bool _started;
 
     protected override void Awake()
     {
         base.Awake();
         TryGetComponent(out _conditioner);
-        //TryGetComponent(out _dialogue);
     }
 
     public override void Interact()
     {
-        Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
+        GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
         DialogueManager.StopConversation();
 
         if (_conditioner.CheckCondition())
         {
             _interactionPanel.SetActive(false);
 
-            //open the event at the end of the conversation. 
-            DialogueMethodsManager.CallBackOnEnd = delegate { _conditioner.DoEvent(); };
-         
-            DialogueManager.StartConversation("Carta_good");
+            if (!_started)
+            {   //open the event at the end of the conversation. 
+                DialogueMethodsManager.CallBackOnEnd = delegate { _conditioner.DoEvent(); };
+                DialogueManager.StartConversation("Carta_good");
+            }
+            else
+                _conditioner.DoEvent();
+
+            _started = true;
         }
         else
         {
             DialogueManager.StartConversation("Carta_bad");
-            Debug.Log("Te faltan cosas para poder hacer esto");
         }
     }
 

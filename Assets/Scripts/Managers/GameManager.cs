@@ -1,32 +1,52 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManager instance;
 
-    public SceneSettings SceneSettings { get => _sceneSettings; }
-    [SerializeField] private SceneSettings _sceneSettings;
-     
-    public UIManager UIManager { get => _uiManager; }
-    [SerializeField] private UIManager _uiManager;
+    public GameFlow GameStatus { get; set; }
+    public Inventory Inventory { get => _inventory; private set => _inventory = value; }
 
-    public Interactable CurrentInUse { get; set; }
+    public List<MinigamesInfo> AllMinigames { get => _allMinigames; private set => _allMinigames = value; }
+    [SerializeField]private List<MinigamesInfo> _allMinigames = new();
 
-    public void ExitCurrentInteraction() 
-    {
-        CurrentInUse.ExitInteraction();
-        Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
-    }
+    [SerializeField] private Inventory _inventory;
 
     private void Awake()
     {
-        Instance = this; 
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        GameStatus = new(EnumsData.GameFlow.GAMEPLAY);
+
+        for (int i = 0; i < (int)EnumsData.Minigame.END_ENUM; i++)
+        {
+            AllMinigames.Add(new((EnumsData.Minigame)i, EnumsData.MiniGameStatus.INCOMPLETED));
+        }
     }
 
-    private void Start()
+    private void Update()
     {
-        Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
+        Debug.Log("status game: " + GameStatus.Status);
+    } 
+
+    #region minigames check
+
+    public void ChangeGameStatus(EnumsData.Minigame game, EnumsData.MiniGameStatus newStatus)
+    {
+        var g = AllMinigames.Find(n => n.Minigame == game);
+        g.ChangeStatus(newStatus);
+         
     }
 
-    
+    #endregion
 }

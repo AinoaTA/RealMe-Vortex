@@ -15,12 +15,12 @@ public class DialogueMethodsManager : ScriptableObject
 
     public void UpdateToGameplayState()
     {
-        Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
+        GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
     }
 
     public void UpdateToMinigameState()
     {
-        Main.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.MINIGAME);
+        GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.MINIGAME);
     }
 
     public void LoadAdditiveScn(string sceneName)

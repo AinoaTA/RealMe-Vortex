@@ -16,7 +16,7 @@ public class CheckerCondition
     {
         for (int i = 0; i < conditionInventory.Length; i++)
         {
-            if (!Main.instance.Inventory.CheckItem(conditionInventory[i].Item, 1)) return false;
+            if (!GameManager.instance.Inventory.CheckItem(conditionInventory[i].Item, 1)) return false;
         }
 
         return true;
