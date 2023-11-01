@@ -47,8 +47,7 @@ public class InitializerController : MonoBehaviour
         {
             if (x.TryGetComponent(out IInitialize interf))
             {
-                interf.InitializeStart();
-                Debug.Log("Started: " + x.name);
+                interf.InitializeStart(); 
             }
         });
     }

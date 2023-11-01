@@ -68,8 +68,7 @@ public class UIManager : MonoBehaviour, IInitialize
     //}
 
     public void StatusMenu(CanvasGroup cg, bool show)
-    {
-        Debug.Log(show);
+    { 
         cg.alpha = show ? 1 : 0;
         cg.blocksRaycasts = show;
         cg.interactable = show;

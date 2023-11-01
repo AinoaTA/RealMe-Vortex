@@ -3921,10 +3921,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _completed: 0
-  _allPieces: []
+  _allPieces:
+  - {fileID: 1458664960}
+  - {fileID: 1490459571}
+  - {fileID: 210545865}
+  - {fileID: 457350223}
   _gmMinigame: {fileID: 2047308953}
   _startConversation: 
   _endConversation: 
+  _miniGameCompleted: 0
 --- !u!4 &983939355
 Transform:
   m_ObjectHideFlags: 0

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,8 +7,13 @@ namespace Minigames.Rebuild
     {
         [SerializeField] private Piece _target;
 
-        [SerializeField] private bool _correct;
+        public bool Correct { get => _correct; private set => _correct = value; }
+        [SerializeField] private bool _correct = false;
+
         [SerializeField] private List<GameObject> _inside = new();
+
+        public delegate void DelegatePiece();
+        public static DelegatePiece OnPlaced;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -19,12 +23,12 @@ namespace Minigames.Rebuild
             {
                 _inside.Add(collision.gameObject);
             }
-
-            Debug.Log("equals? : " + collision.gameObject.Equals(_target.gameObject));
+             
 
             if (collision.gameObject.Equals(_target.gameObject))
             {
-                _correct = true;
+                Correct = true;
+                OnPlaced?.Invoke();
             }
         }
 
@@ -35,7 +39,8 @@ namespace Minigames.Rebuild
             _inside.Remove(collision.gameObject);
             if (collision.gameObject.Equals(_target.gameObject))
             {
-                _correct = false;
+                Correct = false;
+                OnPlaced?.Invoke();
             }
         }
     }
