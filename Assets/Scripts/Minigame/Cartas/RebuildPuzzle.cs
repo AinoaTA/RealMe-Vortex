@@ -61,7 +61,7 @@ namespace Minigames.Rebuild
         {
             Completed = true;
 
-            GameManager.instance.ChangeGameStatus(minigame, EnumsData.MiniGameStatus.COMPLETED);
+            GameManager.instance.ChangeMinigameStatus(minigame, EnumsData.MiniGameStatus.COMPLETED);
 
             if (_endConversation != "")
             {

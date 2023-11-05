@@ -48,11 +48,7 @@ public class LoaderScenes : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync(scene);
     }
-
-    /// <summary>
-    /// Loads a scene with loading screen.
-    /// </summary>
-    /// <param name="namescene"></param>
+     
     public void LoadScene(string namescene)
     {
         SceneManager.LoadScene(namescene);

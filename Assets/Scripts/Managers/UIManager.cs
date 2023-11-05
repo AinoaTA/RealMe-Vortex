@@ -3,7 +3,7 @@ using UnityEngine;
 
 public enum TypeMenu { NONE, PAUSE, OPTIONS, INVENTORY, OTHER }
 
-public class UIManager : MonoBehaviour, IInitialize
+public class UIManager : MonoBehaviour/*, IInitialize*/
 {
     public static UIManager instance;
     [SerializeField] private List<MenuParent> _menus;
@@ -21,13 +21,13 @@ public class UIManager : MonoBehaviour, IInitialize
     //    InputManager.Pause -= OnPause;
     //}
 
-    public void InitializeAwake()
+    public void Awake()/*InitializeAwake()*/
     {
         instance = this;
         TryGetComponent(out _canvasGroup);
     }  
   
-    public void InitializeStart()
+    public void Start()/*InitializeStart()*/
     {
         ChangeMenu(TypeMenu.NONE);
     }

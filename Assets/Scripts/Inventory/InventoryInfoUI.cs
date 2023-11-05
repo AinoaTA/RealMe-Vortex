@@ -7,7 +7,7 @@ public class InventoryInfoUI : MonoBehaviour
     [SerializeField] private Image _image;
     [SerializeField] private TMP_Text _name;
     [SerializeField] private TMP_Text _info;
-
+    private string _empty = "";
     private void OnEnable()
     {
         InventoryItemUI.OnSendInfo += UpdateInfo;
@@ -29,14 +29,13 @@ public class InventoryInfoUI : MonoBehaviour
 
         _image.sprite = item.Sprite;
         _name.text = item.ObjectName;
-        _info.text = item.InfoText;
+        _info.text = item.InfoText; 
     }
 
     public void ResetInfo()
     {
         _image.color = new(1, 1, 1, 0);
-        _name.ClearMesh();
-        _info.ClearMesh();
-    }
-
+        _name.text = _empty;
+        _info.text = _empty;
+    } 
 }

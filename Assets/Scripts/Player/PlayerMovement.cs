@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Player
 {
@@ -28,7 +27,7 @@ namespace Player
         #region input reader
 
         private void OnMove(Vector2 dir)
-        { 
+        {
             _movement = dir;
         }
 
@@ -36,6 +35,7 @@ namespace Player
 
         private void FixedUpdate()
         {
+            if (GameManager.instance.GameStatus == null) return;
             if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
 
             _rb.MovePosition(_rb.position + _speed * Time.fixedDeltaTime * _movement);

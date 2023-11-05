@@ -7,4 +7,6 @@ public class EnumsData
     public enum MiniGameStatus { INCOMPLETED, COMPLETED }
 
     public enum Minigame { REBUILD, GOAWAY, END_ENUM }
+
+    public enum Item {INIT_DOOR_KEY }
 }

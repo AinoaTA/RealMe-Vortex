@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Scene Settings", menuName = "Scene / Settings", order = 1)]
+[CreateAssetMenu(fileName = "Scene Settings", menuName = "Settings", order = 1)]
 public class SceneSettings : ScriptableObject
 {
     public Vector2 CameraClampingX { get => _clampCameraX; }

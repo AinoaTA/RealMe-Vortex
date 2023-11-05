@@ -42,3 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: GamePlay
+    uniqueID: 3517144157
+    locked: 0
+  - name: GameBack
+    uniqueID: 4207891637
+    locked: 0
+  - name: GameMiddle
+    uniqueID: 3833026957
+    locked: 0
+  - name: GameFront
+    uniqueID: 1180551459
+    locked: 0

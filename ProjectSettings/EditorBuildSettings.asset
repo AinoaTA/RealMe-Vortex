@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 549c4b7df37bb8e45b153ba38c7d60cc
+  - enabled: 1
+    path: Assets/Scenes/FirstScene_OniricFall.unity
+    guid: b25dced2763bd4c47a150711e343246e
+  - enabled: 1
+    path: Assets/Scenes/FirstScene_Awakening.unity
+    guid: 75967332311ac8742b414903da14811b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2a6ab430c9233e3468b7ffe7ab17c876, type: 2}

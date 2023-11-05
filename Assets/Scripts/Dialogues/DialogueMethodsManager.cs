@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogueMethodsManager : ScriptableObject
 {
     public static Action CallBackOnEnd;
+    public ItemCategory items;
 
     public void CallbackOnEnd()
     {
@@ -31,5 +32,25 @@ public class DialogueMethodsManager : ScriptableObject
     public void LoadScn(string sceneName)
     {
         LoaderScenes.Instance.LoadScene(sceneName);
+    }
+
+    public void FadeIn()
+    {
+        FadesController.Instance.FadeIn();
+    }
+
+    public void FadeOut()
+    {
+        FadesController.Instance.FadeOut();
+    }
+
+    public void BlinkFadeOut()
+    {
+        FadesController.Instance.BlinkFadeOut();
+    } 
+
+    public void AddItem(int itemtype)
+    {
+        Inventory.instance.AddItem(items.GetItem((EnumsData.Item)itemtype).item, 1);
     }
 }

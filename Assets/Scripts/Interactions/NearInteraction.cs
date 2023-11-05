@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// Inheritance class.
 /// </summary>
-[RequireComponent(typeof(CircleCollider2D))]
+[RequireComponent(typeof(Collider2D))]
 public class NearInteraction : Interactable
 {
     protected ReadInteraction _interaction = new();
@@ -24,6 +24,8 @@ public class NearInteraction : Interactable
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
+        if (blocked) return;
+
         if (collision.CompareTag("Player"))
         {
             _playerIsNear = true;
@@ -33,6 +35,8 @@ public class NearInteraction : Interactable
 
     protected virtual void OnTriggerExit2D(Collider2D collision)
     {
+        if (blocked && !_interactionPanel.activeSelf) return;
+
         if (collision.CompareTag("Player"))
         {
             _playerIsNear = false;
@@ -47,6 +51,10 @@ public class NearInteraction : Interactable
 
     public override void Interact()
     {
-        throw new System.NotImplementedException();
+        if (blocked)
+        {
+            ExitInteraction();
+            return;
+        }
     }
 }

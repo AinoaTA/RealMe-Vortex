@@ -22,9 +22,7 @@ namespace Player
         public void OnInteract()
         {
             if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
-
-            Debug.Log("Interacting");
-
+             
             List<Collider2D> detections = Physics2D.OverlapCircleAll(transform.position, _areaDetection, _interactableLayer).ToList();
 
             if (detections.Count == 0) return;
@@ -45,9 +43,7 @@ namespace Player
             detected.TryGetComponent(out Interactable obj);
 
             GameController.Instance.CurrentInUse = obj;
-            GameController.Instance.CurrentInUse.Interact();
-
-            Debug.Log(detected == null);
+            GameController.Instance.CurrentInUse.Interact(); 
         }
     }
 }

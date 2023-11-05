@@ -22,7 +22,7 @@ namespace NPC
             GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
             _interactionPanel.SetActive(false);
 
-            DialogueManager.StartConversation(_dialogue.conversation);
+            GameManager.instance.StartConver(_dialogue.conversation, true);
         }
 
         public override void ExitInteraction()

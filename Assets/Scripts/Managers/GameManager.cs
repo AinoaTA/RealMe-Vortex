@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,9 @@ public class GameManager : MonoBehaviour
 
     public List<MinigamesInfo> AllMinigames { get => _allMinigames; private set => _allMinigames = value; }
     [SerializeField]private List<MinigamesInfo> _allMinigames = new();
+     
+    [SerializeField] private GameObject _npcDialogue;
+    [SerializeField] private GameObject _oniricDialogue;
 
     private void Awake()
     {
@@ -36,12 +40,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if(GameStatus!=null)
         Debug.Log("status game: " + GameStatus.Status);
     } 
 
     #region minigames check
 
-    public void ChangeGameStatus(EnumsData.Minigame game, EnumsData.MiniGameStatus newStatus)
+    public void ChangeMinigameStatus(EnumsData.Minigame game, EnumsData.MiniGameStatus newStatus)
     {
         var g = AllMinigames.Find(n => n.Minigame == game);
         g.ChangeStatus(newStatus);
@@ -49,4 +54,13 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion
+
+    public void StartConver(string converName, bool npcDialogue=false)
+    {
+        GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
+
+        DialogueManager.UseDialogueUI(npcDialogue ? _npcDialogue : _oniricDialogue);
+        DialogueManager.StopConversation();
+        DialogueManager.StartConversation(converName);
+    }
 }

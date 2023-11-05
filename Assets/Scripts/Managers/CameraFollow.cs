@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Cam
 {
-    public class CameraFollow : MonoBehaviour, IInitialize
+    public class CameraFollow : MonoBehaviour/*, IInitialize*/
     {
         [SerializeField] private SceneSettings _sceneSettings;
         [SerializeField] private Transform _target;
@@ -12,12 +12,15 @@ namespace Cam
         private Vector2 _clampX;
         private Vector2 _clampY;
 
-        public void InitializeAwake()
-        {
+        //public void InitializeAwake()
+        //{
+        private void Awake()
+        { 
             _velocityRef = Vector3.zero;
             _clampX = _sceneSettings.CameraClampingX;
             _clampY = _sceneSettings.CameraClampingY;
-        } 
+        }
+        //} 
 
         private void LateUpdate()
         {
