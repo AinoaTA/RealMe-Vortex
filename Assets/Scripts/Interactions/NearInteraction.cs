@@ -9,7 +9,7 @@ public class NearInteraction : Interactable
     protected ReadInteraction _interaction = new();
     protected GameObject _interactionPanel;
 
-    protected bool _playerIsNear;
+   [SerializeField] protected bool _playerIsNear;
 
     protected virtual void Awake()
     {
@@ -56,5 +56,10 @@ public class NearInteraction : Interactable
             ExitInteraction();
             return;
         }
+    }
+
+    public override void BlockInteraction(bool b)
+    {
+        blocked = b;
     }
 }

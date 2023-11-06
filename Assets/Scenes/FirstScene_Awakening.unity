@@ -579,6 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
+  _playerIsNear: 0
   _character: 1
 --- !u!58 &611598356
 CircleCollider2D:
@@ -614,7 +615,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.04
 --- !u!114 &611598357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,6 +864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
+  _playerIsNear: 0
   _dialogue: Espejo
 --- !u!58 &925867547
 CircleCollider2D:
@@ -1314,7 +1316,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 1.48
 --- !u!1001 &1360674100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1805,7 +1807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 791.8071
+      value: 792.2434
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1813,7 +1815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 531.90356
+      value: 532.1217
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1829,7 +1831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 791.8071
+      value: 792.2434
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1837,7 +1839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 531.90356
+      value: 532.1217
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2377,6 +2379,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 611598355}
+          m_TargetAssemblyTypeName: NearInteraction, Assembly-CSharp
+          m_MethodName: BlockInteraction
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   - guid: 3cf11e6f-73fb-4d1d-9863-50a5f7b90122
     onExecute:
       m_PersistentCalls:
@@ -2490,6 +2504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
+  _playerIsNear: 0
   _dialogue: Cama
 --- !u!58 &1763742744
 CircleCollider2D:
@@ -2623,6 +2638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
+  _playerIsNear: 0
   _dialogue: Reloj
 --- !u!58 &1828979525
 CircleCollider2D:
@@ -2835,6 +2851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
+  _playerIsNear: 0
   _dialogue: Mesilla
 --- !u!1 &2143759056
 GameObject:
@@ -2946,6 +2963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
+  _playerIsNear: 0
 --- !u!1001 &8470506039726499540
 PrefabInstance:
   m_ObjectHideFlags: 0
