@@ -53,4 +53,10 @@ public class DialogueMethodsManager : ScriptableObject
     {
         Inventory.instance.AddItem(items.GetItem((EnumsData.Item)itemtype).item, 1);
     }
+
+
+    public void MustFollowPlayer(bool follow) 
+    {
+        GameManager.instance.MustFollowPlayer = follow;
+    }
 }

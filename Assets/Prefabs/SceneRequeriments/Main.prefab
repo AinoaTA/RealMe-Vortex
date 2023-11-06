@@ -129,6 +129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inventory: {fileID: 9159267875577840252}
   _allMinigames: []
+  _npcDialogue: {fileID: 0}
+  _oniricDialogue: {fileID: 0}
+  _mustFollow: 0
 --- !u!1 &4306323605887044802
 GameObject:
   m_ObjectHideFlags: 0

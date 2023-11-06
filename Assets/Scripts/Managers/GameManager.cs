@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _npcDialogue;
     [SerializeField] private GameObject _oniricDialogue;
 
+    public bool MustFollowPlayer { get=>_mustFollow; set => _mustFollow = value; }
+    [SerializeField] private bool _mustFollow;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -62,5 +64,5 @@ public class GameManager : MonoBehaviour
         DialogueManager.UseDialogueUI(npcDialogue ? _npcDialogue : _oniricDialogue);
         DialogueManager.StopConversation();
         DialogueManager.StartConversation(converName);
-    }
+    } 
 }
