@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8831934412779317304}
   - component: {fileID: 3338180767530966776}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,13 +119,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6519126249033639347, guid: 2a777734bc86e6148bfdd88020a83fd0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7718829753507200287, guid: 2a777734bc86e6148bfdd88020a83fd0, type: 3}
       propertyPath: m_Name
       value: UIManager
       objectReference: {fileID: 0}
     - target: {fileID: 7843959710102029986, guid: 2a777734bc86e6148bfdd88020a83fd0, type: 3}
       propertyPath: m_Size
-      value: 0.99992055
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7843959710102029986, guid: 2a777734bc86e6148bfdd88020a83fd0, type: 3}
       propertyPath: m_Value

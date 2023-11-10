@@ -47,7 +47,7 @@ public class DialogueMethodsManager : ScriptableObject
     public void BlinkFadeOut()
     {
         FadesController.Instance.BlinkFadeOut();
-    } 
+    }
 
     public void AddItem(int itemtype)
     {
@@ -55,8 +55,16 @@ public class DialogueMethodsManager : ScriptableObject
     }
 
 
-    public void MustFollowPlayer(bool follow) 
+    public void MustFollowPlayer(bool follow)
     {
         GameManager.instance.MustFollowPlayer = follow;
     }
+
+    #region CameraEffects
+    public void IsWorseEffect(bool worse)
+    {
+        GameController.Instance.CamData.ObscureVignetteRad(worse);
+    }
+
+    #endregion
 }

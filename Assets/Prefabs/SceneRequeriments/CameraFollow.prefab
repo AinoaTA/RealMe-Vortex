@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8229704191584023729}
   - component: {fileID: 267024794389690603}
   - component: {fileID: 1806022997972317919}
+  - component: {fileID: 9205027911655240349}
+  - component: {fileID: 424727456517083272}
   m_Layer: 0
   m_Name: CameraFollow
   m_TagString: MainCamera
@@ -65,8 +67,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: 0.1
+  far clip plane: 20
   field of view: 60
   orthographic: 1
   orthographic size: 5
@@ -108,3 +110,36 @@ MonoBehaviour:
   _sceneSettings: {fileID: 11400000, guid: 35eb4c09ae76dc147bf0ec722d5d7ee4, type: 2}
   _target: {fileID: 0}
   _smoothTime: 0.2
+--- !u!114 &9205027911655240349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781466287032051836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 049c54a52c24fe24992ae58cb0d8214d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 0}
+  _player: {fileID: 0}
+  _target: {fileID: 0}
+  _enableVignette: 0
+  _vignetteValues: {x: 0.1, y: 0.8}
+--- !u!114 &424727456517083272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781466287032051836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615ad77ac28e1144cbb6f8a7cdfbc8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _xSoftMovement: {x: 0, y: 0}
+  _ySoftMovement: {x: 0, y: 0}
+  _time: 0.25
+  _iterations: 3

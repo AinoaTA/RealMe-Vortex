@@ -24,7 +24,9 @@ public class InputManager : MonoBehaviour
     }
 
     public void OnMove(InputAction.CallbackContext ctx)
-    { 
+    {
+        if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
+
         switch (ctx.phase)
         {
             case InputActionPhase.Started:
@@ -50,6 +52,8 @@ public class InputManager : MonoBehaviour
 
     public void OnInventory(InputAction.CallbackContext ctx)
     {
+        if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
+
         switch (ctx.phase)
         {
             case InputActionPhase.Started:

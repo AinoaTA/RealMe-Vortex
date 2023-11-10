@@ -1,11 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
-    public void Play() 
+    public void Play()
     {
-        LoaderScenes.Instance.LoadAdditiveScene("Level");
+        LoaderScenes.Instance.LoadAdditiveScene("FirstScene_OniricFall");
+    }
+
+    public void OpenOptions()
+    {
+
     }
 }

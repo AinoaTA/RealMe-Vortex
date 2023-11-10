@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -8,8 +9,8 @@ namespace Conflicto_1
 {
     public class Controller : MonoBehaviour
     {
-        private void Awake()
-        {
+        private void Start()
+        { 
             GameManager.instance.MustFollowPlayer = false;
         } 
     }

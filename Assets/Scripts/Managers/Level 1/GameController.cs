@@ -12,6 +12,10 @@ public class GameController : MonoBehaviour
 
     public Interactable CurrentInUse { get; set; }
 
+    public CameraData CamData { get;  private set; }
+    [SerializeField] private GameObject _cam;
+
+
     public void ExitCurrentInteraction()
     {
         CurrentInUse.ExitInteraction();
@@ -25,6 +29,8 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
+        GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY); 
+        CamData = new(_cam.GetComponent<Cam.CameraFollow>(), _cam.GetComponent<Cam.CameraShake>(),
+            _cam.GetComponent<Cam.CameraEffects>());
     }
 }
