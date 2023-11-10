@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{a0ccceab-7d02-45d8-b353-0311fb1828a8}">
+		<property name="assetPath">
+			<value>Arctic Piano Music/2 - Arctic Piano.wav.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e5833eaa-8ebf-4367-bf84-5238a62cbf81}</destination>
+		</relationship>
+	</object>
+</objects>

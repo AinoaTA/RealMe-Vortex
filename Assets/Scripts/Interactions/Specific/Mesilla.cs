@@ -4,11 +4,7 @@ namespace Awakening
     {
         public override void Interact()
         {
-            if (blocked)
-            {
-                ExitInteraction();
-                return;
-            }
+            base.Interact();
 
             if (!Controller.instance.KeyUnlocked)
             {
@@ -18,7 +14,7 @@ namespace Awakening
             {
                 blocked = true;
                 GameManager.instance.StartConver("Mesilla_Key");
-            }
+            } 
         }
     }
 }

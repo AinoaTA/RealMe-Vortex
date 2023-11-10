@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ce1f09ea-1c2f-4743-9a3c-c37f2517b20c}">
+		<property name="assetPath">
+			<value>sfx_oldClock3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.9078684807256234</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e5833eaa-8ebf-4367-bf84-5238a62cbf81}</destination>
+		</relationship>
+	</object>
+</objects>

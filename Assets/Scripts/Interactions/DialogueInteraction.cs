@@ -12,13 +12,14 @@ public class DialogueInteraction : NearInteraction
 
     public override void Interact()
     {
-        if (blocked)
-        {
-            ExitInteraction();
-            return;
-        }
+        //if (blocked)
+        //{
+        //    ExitInteraction();
+        //    return;
+        //}
 
-        FMODUnity.RuntimeManager.PlayOneShot(_pathSound);
+        //FMODUnity.RuntimeManager.PlayOneShot(_pathSound);
+        base.Interact();
         GameManager.instance.StartConver(_dialogue);
     }
 }

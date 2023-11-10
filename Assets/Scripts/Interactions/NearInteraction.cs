@@ -57,8 +57,7 @@ public class NearInteraction : Interactable
             ExitInteraction();
             return;
         }
-
-        
+         
         FMODUnity.RuntimeManager.PlayOneShot(_pathSound);
     }
 
