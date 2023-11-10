@@ -8,8 +8,9 @@ public class NearInteraction : Interactable
 {
     protected ReadInteraction _interaction = new();
     protected GameObject _interactionPanel;
+    protected bool _playerIsNear;
 
-   [SerializeField] protected bool _playerIsNear;
+    [SerializeField] protected string _pathSound;
 
     protected virtual void Awake()
     {
@@ -56,6 +57,9 @@ public class NearInteraction : Interactable
             ExitInteraction();
             return;
         }
+
+        
+        FMODUnity.RuntimeManager.PlayOneShot(_pathSound);
     }
 
     public override void BlockInteraction(bool b)

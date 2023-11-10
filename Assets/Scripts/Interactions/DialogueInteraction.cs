@@ -17,7 +17,8 @@ public class DialogueInteraction : NearInteraction
             ExitInteraction();
             return;
         }
-        
+
+        FMODUnity.RuntimeManager.PlayOneShot(_pathSound);
         GameManager.instance.StartConver(_dialogue);
     }
 }

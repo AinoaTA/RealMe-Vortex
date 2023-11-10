@@ -13,7 +13,7 @@ namespace Awakening
         [SerializeField] private bool _keyUnlocked = false;
 
         [SerializeField] private List<Interactable> _allInteractables = new();
-
+        [SerializeField] private bool _debuggin;
         private void Awake()
         {
             instance = this;
@@ -23,11 +23,14 @@ namespace Awakening
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/WakeUp");
 
-            _allInteractables.ForEach(n =>
+            if (!_debuggin)
             {
-                n.blocked = true;
-                n.enabled = false;
-            });
+                _allInteractables.ForEach(n =>
+                {
+                    n.blocked = true;
+                    n.enabled = false;
+                });
+            }
 
             DialogueManager.StopConversation();
 

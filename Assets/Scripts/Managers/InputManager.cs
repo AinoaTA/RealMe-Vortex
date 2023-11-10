@@ -28,7 +28,7 @@ public class InputManager : MonoBehaviour
         switch (ctx.phase)
         {
             case InputActionPhase.Started:
-                if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
+             
                 OnMoveDelegate?.Invoke(ctx.ReadValue<Vector2>().normalized);
                 break;
 

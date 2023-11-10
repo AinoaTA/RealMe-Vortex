@@ -804,7 +804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 791.75104
+      value: 793.6438
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.y
@@ -812,7 +812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 531.8755
+      value: 532.8219
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -828,7 +828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 791.7511
+      value: 793.6438
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.y
@@ -836,7 +836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 531.87555
+      value: 532.8219
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1084,7 +1084,6 @@ MonoBehaviour:
   - {fileID: 925867546}
   - {fileID: 1828979524}
   - {fileID: 2143759062}
-  _dia: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
 --- !u!4 &1785996722
 Transform:
   m_ObjectHideFlags: 0
@@ -1150,6 +1149,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene
       objectReference: {fileID: 0}
+    - target: {fileID: 214338444839095320, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
+      propertyPath: _nameSound
+      value: OldClock
+      objectReference: {fileID: 0}
+    - target: {fileID: 214338444839095320, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
+      propertyPath: _pathSound
+      value: event:/SFX/Interactions/OldClock
+      objectReference: {fileID: 0}
     - target: {fileID: 777850498201545800, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1189,6 +1196,18 @@ PrefabInstance:
     - target: {fileID: 777850498201545800, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 796386209325567770, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
+      propertyPath: _nameSound
+      value: DrawerOpenClose
+      objectReference: {fileID: 0}
+    - target: {fileID: 796386209325567770, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
+      propertyPath: _pathSound
+      value: event:/SFX/Interactions/DrawerOpenClose
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675200317737856769, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
+      propertyPath: _pathSound
+      value: event:/SFX/Interactions/MoveSheet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

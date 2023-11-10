@@ -35,8 +35,8 @@ namespace Player
 
         private void FixedUpdate()
         {
-            //if (GameManager.instance.GameStatus == null) return;
-            //if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
+            if (GameManager.instance.GameStatus == null) return;
+            if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
 
             _rb.MovePosition(_rb.position + _speed * Time.fixedDeltaTime * _movement);
         }
