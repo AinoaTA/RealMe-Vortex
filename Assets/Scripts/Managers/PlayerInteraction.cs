@@ -25,7 +25,7 @@ namespace Player
         }
 
         public void OnInteract()
-        {
+        { 
             if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
 
             List<Collider2D> detections = Physics2D.OverlapCircleAll(transform.position, _areaDetection, _interactableLayer).ToList();

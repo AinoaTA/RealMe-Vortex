@@ -21,6 +21,8 @@ namespace Awakening
 
         private void Start()
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/WakeUp");
+
             _allInteractables.ForEach(n =>
             {
                 n.blocked = true;
@@ -59,7 +61,7 @@ namespace Awakening
             GameManager.instance.StartConver("Awakening 2");
 
             yield return new WaitForSeconds(0.5f);
-            yield return new WaitWhile(() => DialogueManager.IsConversationActive); 
+            yield return new WaitWhile(() => DialogueManager.IsConversationActive);
         }
     }
 }

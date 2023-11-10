@@ -67,4 +67,9 @@ public class DialogueMethodsManager : ScriptableObject
     }
 
     #endregion
+
+    public void SpecificSoundFMOD(string eventPath)
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(eventPath);
+    }
 }

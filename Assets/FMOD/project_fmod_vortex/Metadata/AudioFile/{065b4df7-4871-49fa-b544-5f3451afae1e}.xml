@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{065b4df7-4871-49fa-b544-5f3451afae1e}">
+		<property name="assetPath">
+			<value>sfx_bedSheet.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>46.219319727891154</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e5833eaa-8ebf-4367-bf84-5238a62cbf81}</destination>
+		</relationship>
+	</object>
+</objects>

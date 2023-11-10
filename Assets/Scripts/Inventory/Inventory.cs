@@ -35,6 +35,8 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item, int quantity = 1)
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/GetItem");
+
         InventoryData id = Items.Find((n) => n.Item == item);
 
         if (id == null)

@@ -11,4 +11,10 @@ public class MenuController : MonoBehaviour
     {
 
     }
+
+
+    public void UISound() 
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/UI/ClickUI");
+    }
 }

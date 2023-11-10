@@ -25,11 +25,10 @@ public class InputManager : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
-        if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
-
         switch (ctx.phase)
         {
             case InputActionPhase.Started:
+                if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
                 OnMoveDelegate?.Invoke(ctx.ReadValue<Vector2>().normalized);
                 break;
 
