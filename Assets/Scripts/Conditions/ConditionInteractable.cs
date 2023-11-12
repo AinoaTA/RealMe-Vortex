@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : NearInteraction
+public class ConditionInteractable : GrabObject
 {
     private Conditioner _conditioner;
     private bool _started;
-
-    [SerializeField] private string _noCompletedSound;
-
+    [SerializeField] private string _startConver;
+    [SerializeField] private string _failedConver;
     protected override void Awake()
     {
         base.Awake();
@@ -18,18 +17,17 @@ public class Door : NearInteraction
     public override void Interact()
     {
         GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
-
+        Debug.Log("int");
         if (_conditioner.CheckCondition())
         {
+            Debug.Log("check");
             _interactionPanel.SetActive(false);
 
             if (!_started)
             {   //open the event at the end of the conversation. 
                 //DialogueMethodsManager.CallBackOnEnd = delegate { _conditioner.DoEvent(); };
-                FadesController.Instance.FadeIn();
-                _conditioner.DoEvent();
 
-                FMODUnity.RuntimeManager.PlayOneShot(_pathSound);
+                _conditioner.DoEvent();
                 //GameManager.instance.StartConver("Carta_good");
             }
             else
@@ -39,8 +37,7 @@ public class Door : NearInteraction
         }
         else
         {
-            GameManager.instance.StartConver("Puerta", true);
-            FMODUnity.RuntimeManager.PlayOneShot(_noCompletedSound);
+            GameManager.instance.StartConver(_failedConver, false);
         }
     }
 

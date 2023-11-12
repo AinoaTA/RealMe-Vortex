@@ -1,6 +1,3 @@
-
-using System.Diagnostics;
-
 namespace NPC
 {
     public class ChuckDialogue : InteractableNPC
@@ -18,11 +15,10 @@ namespace NPC
             switch (BrokenHeart.Controller.instance.CurrentState())
             {
                 case BrokenHeart.StateScene.NONE:
+                    GameManager.instance.StartConver("BrokenHeart/Chuck_Intro", true);
                     break;
                 case BrokenHeart.StateScene.CIGARRILLOS_INTRO:
-                    break;
-                case BrokenHeart.StateScene.CIGARRILLOS_NOENCONTRADOS:
-                    break;
+                    break; 
                 case BrokenHeart.StateScene.CIGARRILLOS_ENCONTRADO:
                     break;
                 case BrokenHeart.StateScene.END_STATE:

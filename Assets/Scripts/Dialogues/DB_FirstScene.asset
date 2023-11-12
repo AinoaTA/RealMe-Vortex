@@ -7595,6 +7595,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 744aaa41-a938-4651-ba1c-de4884e3babd
+        type: 0
+        typeString: 
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -7608,18 +7612,6 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
-            m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
-            m_MethodName: AddItem
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 1
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
           - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
             m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
             m_MethodName: UpdateToGameplayState
@@ -7894,6 +7886,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 79b4d913-81e1-4574-bcb7-a0762d9970d9
+        type: 0
+        typeString: 
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -7907,18 +7903,6 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
-            m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
-            m_MethodName: AddItem
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 2
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
           - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
             m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
             m_MethodName: UpdateToGameplayState
@@ -7960,7 +7944,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: Seguir buscando.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -7994,8 +7978,8 @@ MonoBehaviour:
             m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 248
-        y: 187
+        x: 247
+        y: 182
         width: 160
         height: 30
     entryGroups: []

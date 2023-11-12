@@ -19,11 +19,14 @@ public class GrabObject : NearInteraction
             Grab();
     }
 
-    protected virtual void Grab()
+    public virtual void Grab()
     {
-        Debug.Log("grabbing");
-
         OnGrab?.Invoke(_item, _quantity);
+        gameObject.SetActive(false);
+    }
+
+    public virtual void JustGrab()
+    {
         gameObject.SetActive(false);
     }
 }
