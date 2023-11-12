@@ -1,28 +1,28 @@
 using UnityEngine;
-using PixelCrushers.DialogueSystem;
-
 namespace NPC
 {
     public class InteractableNPC : NearInteraction
     {
         [SerializeField] protected EnumsData.CharacterProfile _character;
-
-        private DialogueSystemTrigger _dialogue;
-
+        
         protected override void Awake()
         {
             base.Awake();
-
-            TryGetComponent(out _dialogue);
         }
 
         public override void Interact()
         {
+            if (blocked)
+            {
+                ExitInteraction();
+                return;
+            }
+
             Debug.Log("NPC: " + _character);
             GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
             _interactionPanel.SetActive(false);
 
-            GameManager.instance.StartConver(_dialogue.conversation, true);
+             //GameManager.instance.StartConver(_dialogue.conversation, true);
         }
 
         public override void ExitInteraction()

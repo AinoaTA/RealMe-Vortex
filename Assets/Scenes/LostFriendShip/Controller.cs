@@ -28,6 +28,11 @@ namespace LostFriendship
             {
                 _secondPart[i]._dialogue = "LostFriendship/" + _seconDialogue[i];
             }
+
+            _secondPart.ToList().ForEach(n => n.BlockInteraction(false));
+
+            _initDoor.blocked = true;
+            _initDoor.enabled = false;
         }
 
         public void UnlockGift()

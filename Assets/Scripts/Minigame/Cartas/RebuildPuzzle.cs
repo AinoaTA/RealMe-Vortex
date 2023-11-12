@@ -101,6 +101,8 @@ namespace Minigames.Rebuild
                 return;
             }
 
+            GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.MINIGAME);
+
             if (_startConversation != "")
             {
                 DialogueManager.StartConversation(_startConversation);

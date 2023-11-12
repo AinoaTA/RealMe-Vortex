@@ -76,4 +76,9 @@ public class InputManager : MonoBehaviour
     }
 
     #endregion
+
+    public void SwitchActionMap(string map) 
+    {
+        _playerInput.SwitchCurrentActionMap(map);
+    }
 }

@@ -53,11 +53,12 @@ public class InventoryUI : MenuParent
     {
         if (_minigame != null & _checker.CheckCondition(_openMinigame.itemsRequired) && !_minigame.Completed)
         {
+            Debug.Log("start");
             _minigame.StartPuzzle();
             return;
         }
 
-        if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return; 
+        if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
 
         _createdUI.ForEach(x => x.gameObject.SetActive(GameManager.instance.Inventory.CheckItem(x.ItemRenference, 1)));
 
@@ -68,6 +69,19 @@ public class InventoryUI : MenuParent
         _UIinfo.ResetInfo();
 
         base.Open();
+    }
+
+    public override void Close()
+    {
+        if (_minigame != null & _checker.CheckCondition(_openMinigame.itemsRequired) && !_minigame.Completed)
+        {
+            Debug.Log("close");
+            _minigame.ClosePuzzle();
+        }
+
+        base.Close();
+        //GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
+        //UIManager.instance.CloseMenu(Type);
     }
 }
 

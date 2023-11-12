@@ -47,6 +47,8 @@ public class NearInteraction : Interactable
 
     public override void ExitInteraction()
     {
+        if(_playerIsNear)
+        _interactionPanel.SetActive(true);
         throw new System.NotImplementedException();
     }
 
@@ -58,11 +60,14 @@ public class NearInteraction : Interactable
             return;
         }
          
+        _interactionPanel.SetActive(false);
+
         FMODUnity.RuntimeManager.PlayOneShot(_pathSound);
     }
 
     public override void BlockInteraction(bool b)
     {
         blocked = b;
+        enabled = !b;
     }
 }
