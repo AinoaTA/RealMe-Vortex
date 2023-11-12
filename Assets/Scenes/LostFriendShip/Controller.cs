@@ -6,7 +6,8 @@ namespace LostFriendship
     public class Controller : MonoBehaviour
     {
         [SerializeField] private Interactable _gift;
-        [SerializeField] private Interactable _door;
+        [SerializeField] private Interactable _initDoor;
+        [SerializeField] private Interactable _lastDoor;
         [SerializeField] private DialogueInteraction[] _secondPart;
         [SerializeField] private string[] _seconDialogue;
 
@@ -36,8 +37,11 @@ namespace LostFriendship
 
         public void UnlockDoor()
         {
-            _door.blocked = false;
-            _door.enabled = true;
+            _initDoor.blocked = true;
+            _initDoor.enabled = false;
+
+            _lastDoor.blocked = false;
+            _lastDoor.enabled = true;
         }
     }
 }

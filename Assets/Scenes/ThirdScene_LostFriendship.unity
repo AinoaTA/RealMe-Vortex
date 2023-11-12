@@ -157,6 +157,7 @@ Transform:
   - {fileID: 325759506}
   - {fileID: 1051188522}
   - {fileID: 736537039}
+  - {fileID: 953510441}
   m_Father: {fileID: 828526434}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &85525457
@@ -1223,7 +1224,6 @@ GameObject:
   m_Component:
   - component: {fileID: 736537039}
   - component: {fileID: 736537041}
-  - component: {fileID: 736537043}
   - component: {fileID: 736537042}
   m_Layer: 6
   m_Name: Puerta
@@ -1291,40 +1291,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 736537038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2600b3b3cd73548823c99429a76126, type: 3}
+  m_Script: {fileID: 11500000, guid: 882402f7a94dd424ab2a5f7daf26540f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onComplete:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
-        m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
-        m_MethodName: LoadScn
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: End
-          m_BoolArgument: 0
-        m_CallState: 2
-  _requiredObjects: {fileID: 11400000, guid: fdb9ddf6a44ad624ea7a9a508951e86c, type: 2}
---- !u!114 &736537043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736537038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9681e6123c67c3b4d8ad3d1068c304e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blocked: 1
-  _pathSound: event:/SFX/DoorOpen
-  _noCompletedSound: 
+  blocked: 0
+  _pathSound: 
+  _dialogue: LostFriendship/Puerta
+  _npcTalk: 0
 --- !u!1 &776532068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,6 +1862,119 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae47288a0678c3d419e9c257c936da69, type: 3}
+--- !u!1 &953510440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 953510441}
+  - component: {fileID: 953510444}
+  - component: {fileID: 953510443}
+  - component: {fileID: 953510442}
+  m_Layer: 6
+  m_Name: PuertaLast
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &953510441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953510440}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 37.76, y: -1.85, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 23099559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &953510442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953510440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2600b3b3cd73548823c99429a76126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
+        m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
+        m_MethodName: LoadScn
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: End
+          m_BoolArgument: 0
+        m_CallState: 2
+  _requiredObjects: {fileID: 11400000, guid: fdb9ddf6a44ad624ea7a9a508951e86c, type: 2}
+--- !u!114 &953510443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953510440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9681e6123c67c3b4d8ad3d1068c304e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blocked: 1
+  _pathSound: event:/SFX/DoorOpen
+  _noCompletedSound: 
+  _closeDoor: 
+--- !u!58 &953510444
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953510440}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
 --- !u!4 &992326462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7373199166106910966, guid: 7b1fbd87709746d4da01a26e57bc4bb5, type: 3}
@@ -2207,7 +2293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gift: {fileID: 776532073}
-  _door: {fileID: 0}
+  _initDoor: {fileID: 736537042}
+  _lastDoor: {fileID: 953510443}
   _secondPart:
   - {fileID: 85525459}
   - {fileID: 2114878852}

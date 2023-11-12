@@ -8,7 +8,7 @@ public class Door : NearInteraction
     private bool _started;
 
     [SerializeField] private string _noCompletedSound;
-
+    [SerializeField] private string _closeDoor = "Puerta";
     protected override void Awake()
     {
         base.Awake();
@@ -39,7 +39,9 @@ public class Door : NearInteraction
         }
         else
         {
-            GameManager.instance.StartConver("Puerta", true);
+            if (_closeDoor != "")
+                GameManager.instance.StartConver(_closeDoor, true);
+
             FMODUnity.RuntimeManager.PlayOneShot(_noCompletedSound);
         }
     }
