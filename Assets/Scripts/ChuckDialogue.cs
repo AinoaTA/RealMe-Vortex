@@ -16,10 +16,11 @@ namespace NPC
             {
                 case BrokenHeart.StateScene.NONE:
                     GameManager.instance.StartConver("BrokenHeart/Chuck_Intro", true);
+                  
                     break;
                 case BrokenHeart.StateScene.CIGARRILLOS_INTRO:
-                    break; 
-                case BrokenHeart.StateScene.CIGARRILLOS_ENCONTRADO:
+            
+                case BrokenHeart.StateScene.MUST_ELEK_TALK:
                     break;
                 case BrokenHeart.StateScene.END_STATE:
                     break;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DialogueInteraction : NearInteraction
 {
-    [SerializeField] protected string _dialogue;
+      public string _dialogue;
 
     public override void ExitInteraction()
     {

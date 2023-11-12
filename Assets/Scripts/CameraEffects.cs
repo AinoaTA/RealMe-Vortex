@@ -1,5 +1,5 @@
 using System.Collections;
-using UnityEngine; 
+using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
 namespace Cam
@@ -18,6 +18,7 @@ namespace Cam
 
         private void Start()
         {
+            if (_player == null) return;
             ModifyVignete();
 
             VariationVignette(0.25f);
@@ -66,7 +67,7 @@ namespace Cam
             int times = 0;
             float val = vg.intensity.value;
             bool overMid = val > 0.5f;
-             
+
             while (times < rep)
             {
                 float t = 0;
@@ -88,7 +89,7 @@ namespace Cam
 
                 times++;
             }
-        } 
-        #endregion 
+        }
+        #endregion
     }
 }

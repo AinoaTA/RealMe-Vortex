@@ -10,10 +10,10 @@ public abstract class Puzzle : MonoBehaviour
 
     public System.Action OnCompleteMinigame;
 
-    protected abstract void StartPuzzle();
-    protected abstract void ClosePuzzle();
-    protected abstract void CompletedPuzzle();
-    protected abstract void ResetPuzzle();
+    public abstract void StartPuzzle();
+    public abstract void ClosePuzzle();
+    public abstract void CompletedPuzzle();
+    public abstract void ResetPuzzle();
 
     protected virtual IEnumerator OnCompleteAnimation()
     {

@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d93e6a302a59334fa19c46da6b2ee1c, type: 3}
   m_Name: Carta
   m_EditorClassIdentifier: 
-  _objectName: Carta Reconstruida
+  _objectName: Carta Reconstruida de Fei
   _sprite: {fileID: 21300000, guid: 2ba68fa8bf3994644b5d96d137d32974, type: 3}
-  _infoText: 'Carta de X que has reconstruido
-
-'
+  _infoText: "Querida Logan,\r\n\r\nNo quiero marcharme sin hacer las paces contigo.
+    \r\nS\xE9 que est\xE1s enfadada, y yo tambi\xE9n. No es justo que nos tengamos
+    que separar, pero mi abuela est\xE1 enferma y tenemos que irnos para cuidar de
+    ella. Ya sabes lo que dice mi padre: <<La familia es lo m\xE1s importante>>.\r\nPero
+    t\xFA tambi\xE9n eres mi familia, Logan. Eres mi mejor amiga, mi hermana. Y eso
+    no va a cambiar por muy lejos que nos vayamos.\r\nTe dejo mi direcci\xF3n y mi
+    tel\xE9fono para que puedas escribirme. Si no lo haces, entender\xE9 que has
+    pasado p\xE1gina y no insistir\xE9 m\xE1s. \r\nEscr\xEDbeme, por favor. \r\n\r\nTe
+    echar\xE9 much\xEDsimo de menos.\r\nTu amiga, Fei.\r\n\r\nPD. En la caja te dejo
+    un recuerdo. Espero que esta vez no lo tires a la basura.\r\n"

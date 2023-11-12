@@ -2,6 +2,7 @@ using UnityEngine;
 using PixelCrushers.DialogueSystem;
 using System.Linq;
 using System.Collections;
+using UnityEngine.Events;
 
 namespace Minigames.Rebuild
 {
@@ -11,7 +12,8 @@ namespace Minigames.Rebuild
         [SerializeField] private Transform _gmMinigame;
         [SerializeField] private string _startConversation;
         [SerializeField] private string _endConversation;
-
+        [SerializeField] private Item[] _itemsGiven;
+        [SerializeField] private UnityEvent _onCompleted;
         private Camera _cam;
 
         private void OnEnable()
@@ -50,14 +52,14 @@ namespace Minigames.Rebuild
             _gmMinigame.gameObject.SetActive(false);
         }
 
-        protected override void ClosePuzzle()
+        public override void ClosePuzzle()
         {
             _gmMinigame.gameObject.SetActive(false);
 
             GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
         }
 
-        protected override void CompletedPuzzle()
+        public override void CompletedPuzzle()
         {
             Completed = true;
 
@@ -69,9 +71,19 @@ namespace Minigames.Rebuild
             }
 
             StartCoroutine(OnCompleteAnimation());
+
+            if (_itemsGiven.Length!=0)
+            {
+                _itemsGiven.ToList().ForEach(n =>
+                {
+                    Inventory.instance.AddItem(n, 1);
+                }); 
+            }
+
+            _onCompleted?.Invoke();
         }
 
-        protected override void StartPuzzle()
+        public override void StartPuzzle()
         {
             if (Completed)
             {
@@ -97,7 +109,7 @@ namespace Minigames.Rebuild
             ClosePuzzle();
         }
 
-        protected override void ResetPuzzle()
+        public override void ResetPuzzle()
         {
             throw new System.NotImplementedException();
         }

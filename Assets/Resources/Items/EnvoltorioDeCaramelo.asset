@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d93e6a302a59334fa19c46da6b2ee1c, type: 3}
-  m_Name: Trozo 4
+  m_Name: EnvoltorioDeCaramelo
   m_EditorClassIdentifier: 
-  _objectName: 'Trozo '
-  _sprite: {fileID: 21300000, guid: 2ba68fa8bf3994644b5d96d137d32974, type: 3}
-  _infoText: 'Trozo de carta
-
-'
+  _objectName: Envoltorio de Caramelo
+  _sprite: {fileID: 0}
+  _infoText: "Caramelo que te regal\xF3 Fei."

@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ConditionInteractable : GrabObject
 {
     private Conditioner _conditioner;
     private bool _started;
+
     [SerializeField] private string _startConver;
     [SerializeField] private string _failedConver;
+
     protected override void Awake()
     {
         base.Awake();

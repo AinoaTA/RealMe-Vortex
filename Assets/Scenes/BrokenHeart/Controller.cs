@@ -7,7 +7,12 @@ namespace BrokenHeart
     public enum StateScene
     {
         NONE = 0,
-        CIGARRILLOS_INTRO, CIGARRILLOS_ENCONTRADO,
+        CIGARRILLOS_INTRO,
+        MUST_ELEK_TALK, ELEK_TALKED_FINISHED,
+        FIND_PILLS, FOUND_PILLS,
+        FIND_MULETA, ELEK_TALKTO_LOGAN,
+        BAD_TALKED, ELEK_COMES_TO_HELP,
+
         END_STATE
     }
 
@@ -16,8 +21,8 @@ namespace BrokenHeart
         public static Controller instance;
         [SerializeField] private Interactable[] _allInteractables;
         [SerializeField] private bool _debuggin;
-
-        [SerializeField]private StateScene _chuckState;
+        [SerializeField] private NPC.ChuckDialogue _chuck;
+        [SerializeField] private StateScene _chuckState;
 
         private void Awake()
         {
@@ -50,6 +55,27 @@ namespace BrokenHeart
         public void NextState()
         {
             _chuckState++;
+
+            switch (_chuckState)
+            {
+                case StateScene.NONE:
+                    break;
+                case StateScene.CIGARRILLOS_INTRO:
+                case StateScene.MUST_ELEK_TALK: 
+                case StateScene.FIND_PILLS:
+                case StateScene.FIND_MULETA:
+                    _chuck.blocked = true;
+
+                    break;
+                case StateScene.FOUND_PILLS:
+                case StateScene.ELEK_TALKED_FINISHED:
+                    _chuck.blocked = false;
+                    break;
+                case StateScene.END_STATE:
+                    break;
+                default:
+                    break;
+            }
         }
 
         public StateScene CurrentState() => _chuckState;

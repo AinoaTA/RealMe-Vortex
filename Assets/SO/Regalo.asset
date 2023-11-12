@@ -10,14 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b50344f3beb7cc4db0a06d8ed429597, type: 3}
-  m_Name: InventoryCondition
+  m_Name: Regalo
   m_EditorClassIdentifier: 
   itemsRequired:
-  - _item: {fileID: 11400000, guid: ddca5145e93682c4396bd71b02368f46, type: 2}
-    _quantity: 1
-  - _item: {fileID: 11400000, guid: 60da8a96f2d5ddb47b7f404a256b1807, type: 2}
-    _quantity: 1
-  - _item: {fileID: 11400000, guid: 3413a83e3e39f0b4c974429e3c8dd0ff, type: 2}
-    _quantity: 1
-  - _item: {fileID: 11400000, guid: 3221f56f4bf82614eae06f996111a5cd, type: 2}
+  - _item: {fileID: 11400000, guid: e91239df7cbe35445bc68af7ce7be739, type: 2}
     _quantity: 1
