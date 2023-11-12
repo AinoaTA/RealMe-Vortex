@@ -65,9 +65,9 @@ Transform:
   m_GameObject: {fileID: 2742994518478765177}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.25, y: 0.6, z: 0}
-  m_LocalScale: {x: 0.54038, y: 0.54038, z: 0.54038}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 22.3501, y: 0.0089, z: 0}
+  m_LocalScale: {x: 0.24533999, y: 0.24533999, z: 0.24533999}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 777850498201545800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_SortingLayerID: -777823139
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 31c21ea5ce0cb79488f2fff0e3d97e63, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96434e0528a704d4591637523238b2f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -149,9 +149,9 @@ Transform:
   m_GameObject: {fileID: 2959849913437824935}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.25, y: 0.6, z: 0}
-  m_LocalScale: {x: 0.54038, y: 0.54038, z: 0.54038}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 22.6567, y: 0.0089, z: 0}
+  m_LocalScale: {x: 0.24533999, y: 0.24533999, z: 0.24533999}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 777850498201545800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 567eb5244fa147e448d683c1024b1e03, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2d86f3c22fb11240ae046be41779c29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -234,7 +234,7 @@ Transform:
   m_GameObject: {fileID: 5036301811565376419}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.123, y: -1.886, z: 0}
+  m_LocalPosition: {x: 24.34, y: -0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
-  _playerIsNear: 0
+  _pathSound: event:/SFX/Interactions/CrackedGlass
   _dialogue: Espejo
 --- !u!58 &8386148650413698880
 CircleCollider2D:
@@ -447,7 +447,7 @@ Transform:
   m_GameObject: {fileID: 6569112363430992061}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.75, y: -2.46, z: 0}
+  m_LocalPosition: {x: 41.16, y: -1.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
-  _playerIsNear: 0
+  _pathSound: event:/SFX/Interactions/OldClock
   _dialogue: Reloj
 --- !u!58 &7152326105377772
 CircleCollider2D:
@@ -530,7 +530,7 @@ Transform:
   m_GameObject: {fileID: 8164573041239201567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.91, y: 0.02, z: 0}
+  m_LocalPosition: {x: -0.84, y: -0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
-  _playerIsNear: 0
+  _pathSound: event:/SFX/Interactions/DrawerOpenClose
   _dialogue: Mesilla
 --- !u!1 &8757473126677282079
 GameObject:
@@ -613,7 +613,7 @@ Transform:
   m_GameObject: {fileID: 8757473126677282079}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.22, y: -1.57, z: 0}
+  m_LocalPosition: {x: -5.53, y: -2.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
-  _playerIsNear: 0
+  _pathSound: event:/SFX/Interactions/MoveSheet
   _dialogue: Cama
 --- !u!58 &2833797312415575768
 CircleCollider2D:
@@ -697,7 +697,7 @@ Transform:
   m_GameObject: {fileID: 9051371202546362816}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.8, y: -1.15, z: 0}
+  m_LocalPosition: {x: 51.98, y: -1.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -779,4 +779,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
-  _playerIsNear: 0
+  _pathSound: 

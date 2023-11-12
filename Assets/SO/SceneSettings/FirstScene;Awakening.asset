@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 596317485f5085c4da95eedb940ae762, type: 3}
   m_Name: FirstScene;Awakening
   m_EditorClassIdentifier: 
-  _clampCameraX: {x: -4.75, y: 53.5}
+  _clampCameraX: {x: -3.28, y: 49.1}
   _clampCameraY: {x: 0, y: 0}

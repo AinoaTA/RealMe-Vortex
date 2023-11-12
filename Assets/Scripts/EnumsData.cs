@@ -8,5 +8,5 @@ public class EnumsData
 
     public enum Minigame { REBUILD, GOAWAY, END_ENUM }
 
-    public enum Item {INIT_DOOR_KEY }
+    public enum Item {INIT_DOOR_KEY, CIGARRILLOS_MOJADOS, CIGARRILLOS_MALOS }
 }

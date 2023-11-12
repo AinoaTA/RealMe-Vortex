@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d93e6a302a59334fa19c46da6b2ee1c, type: 3}
+  m_Name: Recuerdo_TacoDeBillar
+  m_EditorClassIdentifier: 
+  _objectName: Taco de Billar
+  _sprite: {fileID: 0}
+  _infoText: "En mi primera cita con Chuck dej\xE9 que me ense\xF1ara a jugar al
+    billar aunque yo era muy buena jugando. Quer\xEDa gustarle, as\xED que me dej\xE9
+    ganar. Recuerdo que me dijo \u201Cmenos mal que est\xE1s buena, porque como jugadora
+    de billar eres una in\xFAtil\u201D. Tendr\xEDa que haberle dado con el taco en
+    la cabeza."

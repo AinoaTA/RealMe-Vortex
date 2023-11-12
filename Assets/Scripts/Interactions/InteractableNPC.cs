@@ -5,7 +5,7 @@ namespace NPC
 {
     public class InteractableNPC : NearInteraction
     {
-        [SerializeField] private EnumsData.CharacterProfile _character;
+        [SerializeField] protected EnumsData.CharacterProfile _character;
 
         private DialogueSystemTrigger _dialogue;
 

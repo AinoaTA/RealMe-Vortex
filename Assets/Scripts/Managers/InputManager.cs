@@ -2,8 +2,7 @@ using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
-{
-
+{ 
     public delegate void DelegateMove(Vector2 vector);
     public static DelegateMove OnMoveDelegate;
 

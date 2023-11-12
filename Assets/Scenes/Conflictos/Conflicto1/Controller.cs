@@ -9,8 +9,9 @@ namespace Conflicto_1
 {
     public class Controller : MonoBehaviour
     {
-        private void Start()
-        { 
+        private IEnumerator Start()
+        {
+            yield return new WaitForSeconds(0.3f);
             GameManager.instance.MustFollowPlayer = false;
         } 
     }

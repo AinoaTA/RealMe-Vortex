@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public bool MustFollowPlayer { get=>_mustFollow; set => _mustFollow = value; }
     [SerializeField] private bool _mustFollow;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void StartConver(string converName, bool npcDialogue=false)
     {
-        GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
+        GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE); 
 
         DialogueManager.UseDialogueUI(npcDialogue ? _npcDialogue : _oniricDialogue);
         DialogueManager.StopConversation();
