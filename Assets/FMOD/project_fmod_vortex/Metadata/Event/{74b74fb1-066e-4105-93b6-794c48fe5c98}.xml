@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{74b74fb1-066e-4105-93b6-794c48fe5c98}">
 		<property name="name">
-			<value>DoorClose</value>
+			<value>DoorLocked</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
@@ -38,6 +38,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{1b885a17-e87f-4eaa-ae2a-bf6044f8b0f0}">
+		<relationship name="modules">
+			<destination>{c7134cc1-9c83-4e38-a723-c6e6456e0bd0}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{ed807918-72b8-4f31-be4f-0b933fb459b7}</destination>
 		</relationship>
@@ -56,9 +59,9 @@
 	<object class="EventAutomatableProperties" id="{09ce61cf-f631-4eea-a3f7-19537f9839f9}" />
 	<object class="MarkerTrack" id="{f36f211a-144c-45b8-8456-b8096b48521e}" />
 	<object class="Timeline" id="{87512e59-9947-4974-b555-70c03e31bde5}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
+		<relationship name="modules">
+			<destination>{c7134cc1-9c83-4e38-a723-c6e6456e0bd0}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ed807918-72b8-4f31-be4f-0b933fb459b7}">
 		<relationship name="effectChain">
@@ -69,6 +72,14 @@
 		</relationship>
 		<relationship name="mixer">
 			<destination>{d96a17ff-9f02-46ba-a866-073a85db8029}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{c7134cc1-9c83-4e38-a723-c6e6456e0bd0}">
+		<property name="length">
+			<value>0.61628117913832203</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{ae414eb4-7e2b-492f-b554-de24ae5af2e0}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{4b5f1384-e3ab-40f5-80fb-704e3aa81643}">

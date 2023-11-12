@@ -26,8 +26,7 @@ namespace BrokenHeart
         }
 
         public void LoadDialogue()
-        {
-            Debug.Log("A");
+        { 
             GameManager.instance.StartConver(_dialogueName, false);
         }
     }

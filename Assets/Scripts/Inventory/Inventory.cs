@@ -4,7 +4,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
-     
+
     public List<InventoryData> Items { get => _items; private set => _items = value; }
 
     [SerializeField] private List<InventoryData> _items = new();
@@ -73,4 +73,4 @@ public class Inventory : MonoBehaviour
 
         return false;
     }
-} 
+}

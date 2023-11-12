@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: Regalo
   m_EditorClassIdentifier: 
   itemsRequired:
-  - _item: {fileID: 11400000, guid: e91239df7cbe35445bc68af7ce7be739, type: 2}
+  - _item: {fileID: 11400000, guid: ddca5145e93682c4396bd71b02368f46, type: 2}
+    _quantity: 1
+  - _item: {fileID: 11400000, guid: b12d19f9e83660844b17eceab0a5bd62, type: 2}
+    _quantity: 1
+  - _item: {fileID: 11400000, guid: 57ed4f00061b8244b8901a001fe16938, type: 2}
+    _quantity: 1
+  - _item: {fileID: 11400000, guid: 2afdf12c4da99a540a9f3546ba9b78a8, type: 2}
+    _quantity: 1
+  - _item: {fileID: 11400000, guid: bfe6a481e83b9194daebda76f222d1a8, type: 2}
     _quantity: 1

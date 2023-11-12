@@ -1,19 +1,12 @@
-using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "itemData", menuName = "SO/itemsData")]
 public class ItemCategory : ScriptableObject
 {
-    public Items[] items;
-    [System.Serializable]
-    public struct Items
-    {
-        public EnumsData.Item itemType;
-        public Item item;
-    }
+    public Item[] items; 
 
-    public Items GetItem(EnumsData.Item reference) 
+    public Item GetItem(int index)
     {
-        return items.ToList().Find(n => n.itemType == reference); 
+        return items[index];
     } 
 }

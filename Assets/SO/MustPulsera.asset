@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d93e6a302a59334fa19c46da6b2ee1c, type: 3}
-  m_Name: Papel
+  m_Script: {fileID: 11500000, guid: 2b50344f3beb7cc4db0a06d8ed429597, type: 3}
+  m_Name: MustPulsera
   m_EditorClassIdentifier: 
-  _objectName: Papel
-  _sprite: {fileID: 21300000, guid: afe564cd16103044697441a95757b74d, type: 3}
-  _infoText: Papel
+  itemsRequired:
+  - _item: {fileID: 11400000, guid: 695656a3761cee947aa97bf538370566, type: 2}
+    _quantity: 1

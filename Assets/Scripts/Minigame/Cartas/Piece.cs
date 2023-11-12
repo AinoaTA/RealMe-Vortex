@@ -74,6 +74,8 @@ namespace Minigames.Rebuild
         public void OnMouseDown()
         {
             if (_block) return;
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/CardSelected");
             _dragging = true;
         }
 

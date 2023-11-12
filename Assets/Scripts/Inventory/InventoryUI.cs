@@ -15,6 +15,11 @@ public class InventoryUI : MenuParent
     public delegate void DelegateInventory(TypeMenu type);
     public static DelegateInventory OnOpenInventory;
 
+    [Header("Optional")]
+    [SerializeField] private InventoryCondition _openMinigame;
+    [SerializeField] private Puzzle _minigame;
+    private CheckerCondition _checker = new();
+
     private void OnEnable()
     {
         InputManager.OnOpenInventory += Open;
@@ -44,9 +49,15 @@ public class InventoryUI : MenuParent
         _createdUI.Add(ui);
     }
 
-    protected override void Open()
+    public override void Open()
     {
-        if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
+        if (_minigame != null & _checker.CheckCondition(_openMinigame.itemsRequired) && !_minigame.Completed)
+        {
+            _minigame.StartPuzzle();
+            return;
+        }
+
+        if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return; 
 
         _createdUI.ForEach(x => x.gameObject.SetActive(GameManager.instance.Inventory.CheckItem(x.ItemRenference, 1)));
 
@@ -80,9 +91,9 @@ public class InventoryEditor : Editor
             //string[] prefabPaths = AssetDatabase.GetAllAssetPaths().Where(path => path.EndsWith(".asset", System.StringComparison.OrdinalIgnoreCase)).ToArray();
             Debug.Log(it.Length);
 
-            myTarget._allItemsToLoad = it.ToList(); 
+            myTarget._allItemsToLoad = it.ToList();
         }
-    }  
+    }
 }
 
 

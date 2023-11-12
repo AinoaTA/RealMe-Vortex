@@ -3,6 +3,7 @@ using UnityEngine;
 public class DialogueInteraction : NearInteraction
 {
       public string _dialogue;
+    [SerializeField] private bool _npcTalk;
 
     public override void ExitInteraction()
     {
@@ -20,6 +21,6 @@ public class DialogueInteraction : NearInteraction
 
         //FMODUnity.RuntimeManager.PlayOneShot(_pathSound);
         base.Interact();
-        GameManager.instance.StartConver(_dialogue);
+        GameManager.instance.StartConver(_dialogue,_npcTalk);
     }
 }

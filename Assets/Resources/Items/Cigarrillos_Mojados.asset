@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cigarrillos_Mojados
   m_EditorClassIdentifier: 
   _objectName: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 21300002, guid: c15ba1dcb835b28498cc6239dc893a2e, type: 3}
   _infoText: 

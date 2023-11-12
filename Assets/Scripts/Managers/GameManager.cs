@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public bool MustFollowPlayer { get=>_mustFollow; set => _mustFollow = value; }
     [SerializeField] private bool _mustFollow;
 
+    public bool TrustedInElek { get => _trusted; set => _trusted = value; }
+    [SerializeField]private bool _trusted;
+
     private void Awake()
     {
         if (instance != null && instance != this)

@@ -51,7 +51,14 @@ public class DialogueMethodsManager : ScriptableObject
 
     public void AddItem(int itemtype)
     {
-        Inventory.instance.AddItem(items.GetItem((EnumsData.Item)itemtype).item, 1);
+        Debug.Log(items.GetItem(itemtype).ObjectName);
+        Inventory.instance.AddItem(items.GetItem(itemtype), 1);
+    }
+
+    public void AddItem(Item itemtype)
+    {
+        //Debug.Log(items.GetItem(itemtype).ObjectName);
+        Inventory.instance.AddItem(itemtype, 1);
     }
 
 

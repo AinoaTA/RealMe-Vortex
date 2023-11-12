@@ -11,13 +11,11 @@ public class MenuParent : MonoBehaviour
     private void Awake()
     {
         TryGetComponent(out _canvas);
-
-        Debug.Log(_canvas);
     }
 
-    protected virtual void Open() { }
+    public virtual void Open() { }
 
-    protected virtual void Close()
+    public virtual void Close()
     {
         GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.GAMEPLAY);
         UIManager.instance.CloseMenu(Type);

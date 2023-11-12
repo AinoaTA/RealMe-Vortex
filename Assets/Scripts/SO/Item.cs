@@ -8,9 +8,7 @@ public class Item : ScriptableObject
 
     public Sprite Sprite { get => _sprite; }
     [SerializeField] private Sprite _sprite;
-
-
-
+     
     public string InfoText { get => _infoText;  }
     [TextArea]
     [SerializeField] private string _infoText;

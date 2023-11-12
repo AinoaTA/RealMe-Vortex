@@ -7978,7 +7978,7 @@ MonoBehaviour:
             m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 247
+        x: 248
         y: 182
         width: 160
         height: 30
@@ -12242,11 +12242,11 @@ MonoBehaviour:
           - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
             m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
             m_MethodName: AddItem
-            m_Mode: 3
+            m_Mode: 2
             m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 3
+              m_ObjectArgument: {fileID: 11400000, guid: ddca5145e93682c4396bd71b02368f46, type: 2}
+              m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+              m_IntArgument: 1
               m_FloatArgument: 0
               m_StringArgument: 
               m_BoolArgument: 0
@@ -12546,8 +12546,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 604.7953}
-    canvasZoom: 0.94000006
+    canvasScrollPosition: {x: 0, y: 682.02997}
+    canvasZoom: 0.7900002
   - id: 22
     fields:
     - title: Title
@@ -12876,10 +12876,10 @@ MonoBehaviour:
           - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
             m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
             m_MethodName: AddItem
-            m_Mode: 3
+            m_Mode: 2
             m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_ObjectArgument: {fileID: 11400000, guid: 57ed4f00061b8244b8901a001fe16938, type: 2}
+              m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
               m_IntArgument: 2
               m_FloatArgument: 0
               m_StringArgument: 
@@ -13174,11 +13174,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 5
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 3
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -13221,11 +13221,11 @@ MonoBehaviour:
           - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
             m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
             m_MethodName: AddItem
-            m_Mode: 3
+            m_Mode: 2
             m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 2
+              m_ObjectArgument: {fileID: 11400000, guid: b12d19f9e83660844b17eceab0a5bd62, type: 2}
+              m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+              m_IntArgument: 3
               m_FloatArgument: 0
               m_StringArgument: 
               m_BoolArgument: 0
@@ -13566,11 +13566,11 @@ MonoBehaviour:
           - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
             m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
             m_MethodName: AddItem
-            m_Mode: 3
+            m_Mode: 2
             m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 3
+              m_ObjectArgument: {fileID: 11400000, guid: 2afdf12c4da99a540a9f3546ba9b78a8, type: 2}
+              m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+              m_IntArgument: 4
               m_FloatArgument: 0
               m_StringArgument: 
               m_BoolArgument: 0
@@ -13856,11 +13856,11 @@ MonoBehaviour:
           - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
             m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
             m_MethodName: AddItem
-            m_Mode: 3
+            m_Mode: 2
             m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 4
+              m_ObjectArgument: {fileID: 11400000, guid: bfe6a481e83b9194daebda76f222d1a8, type: 2}
+              m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+              m_IntArgument: 5
               m_FloatArgument: 0
               m_StringArgument: 
               m_BoolArgument: 0

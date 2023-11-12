@@ -5,7 +5,8 @@ namespace LostFriendship
 {
     public class Controller : MonoBehaviour
     {
-        [SerializeField] private Interactable _gift; 
+        [SerializeField] private Interactable _gift;
+        [SerializeField] private Interactable _door;
         [SerializeField] private DialogueInteraction[] _secondPart;
         [SerializeField] private string[] _seconDialogue;
 
@@ -31,6 +32,12 @@ namespace LostFriendship
         public void UnlockGift()
         {
             _gift.blocked = false;
+        }
+
+        public void UnlockDoor()
+        {
+            _door.blocked = false;
+            _door.enabled = true;
         }
     }
 }

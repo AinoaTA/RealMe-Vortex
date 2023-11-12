@@ -9,6 +9,7 @@ public abstract class Puzzle : MonoBehaviour
     [SerializeField] private bool _completed;
 
     public System.Action OnCompleteMinigame;
+   [SerializeField] protected string _completedSound;
 
     public abstract void StartPuzzle();
     public abstract void ClosePuzzle();

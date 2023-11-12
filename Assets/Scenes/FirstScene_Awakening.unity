@@ -206,6 +206,7 @@ MonoBehaviour:
   blocked: 0
   _pathSound: event:/SFX/Interactions/CrackedGlass
   _dialogue: Espejo
+  _npcTalk: 0
 --- !u!1001 &262997973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -319,7 +320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocked: 0
-  _pathSound: 
+  _pathSound: event:/SFX/DoorOpenClose
+  _noCompletedSound: event:/SFX/DoorLocked
 --- !u!114 &752293821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,7 +394,7 @@ Transform:
   m_GameObject: {fileID: 752293819}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.98, y: -1.09, z: 0}
+  m_LocalPosition: {x: 51.3, y: -1.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -425,7 +427,7 @@ Transform:
   m_GameObject: {fileID: 786794545}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.53, y: -2.66, z: 0}
+  m_LocalPosition: {x: -4.41, y: -3.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -481,6 +483,7 @@ MonoBehaviour:
   blocked: 0
   _pathSound: event:/SFX/Interactions/MoveSheet
   _dialogue: Cama
+  _npcTalk: 0
 --- !u!1001 &854348984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -489,6 +492,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 144940336831092900, guid: 54fd774bdfeba8441bcc10333e7490a4, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1345697090341017087, guid: 54fd774bdfeba8441bcc10333e7490a4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -653,6 +660,7 @@ MonoBehaviour:
   blocked: 0
   _pathSound: event:/SFX/Interactions/DrawerOpenClose
   _dialogue: Mesilla
+  _npcTalk: 0
 --- !u!1 &1024451847 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3912201127631885538, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
@@ -1157,7 +1165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 897
+      value: 899.6471
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1165,7 +1173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 584.5
+      value: 585.82355
       objectReference: {fileID: 0}
     - target: {fileID: 5752327049090979381, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1181,7 +1189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 897
+      value: 899.6471
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1189,7 +1197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 584.5
+      value: 585.82355
       objectReference: {fileID: 0}
     - target: {fileID: 5920812137075298513, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1343,6 +1351,7 @@ MonoBehaviour:
   blocked: 0
   _pathSound: event:/SFX/Interactions/OldClock
   _dialogue: Reloj
+  _npcTalk: 0
 --- !u!4 &1628595184 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7373199166106910966, guid: 7b1fbd87709746d4da01a26e57bc4bb5, type: 3}
@@ -1509,7 +1518,7 @@ MonoBehaviour:
   - {fileID: 14734553}
   - {fileID: 1467650356}
   - {fileID: 752293820}
-  _debuggin: 0
+  _debuggin: 1
 --- !u!4 &1785996722
 Transform:
   m_ObjectHideFlags: 0
@@ -1617,7 +1626,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1184701678899271073, guid: 4fe85450044b2ea45a9e094064519e79, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2461928981632846797, guid: 4fe85450044b2ea45a9e094064519e79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1661,11 +1670,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2758001793423894980, guid: 4fe85450044b2ea45a9e094064519e79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.6
+      value: 55.5
       objectReference: {fileID: 0}
     - target: {fileID: 3229257934931709977, guid: 4fe85450044b2ea45a9e094064519e79, type: 3}
       propertyPath: m_Name
       value: Limits
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399486297943388958, guid: 4fe85450044b2ea45a9e094064519e79, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1688,9 +1701,13 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1628595184}
+    - target: {fileID: 1806022997972317919, guid: b9556b220d0955a4ca646db10766874e, type: 3}
+      propertyPath: _sceneSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 5691de914e572854280229fd3eb0a257, type: 2}
     - target: {fileID: 2580524151068754860, guid: b9556b220d0955a4ca646db10766874e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 2580524151068754860, guid: b9556b220d0955a4ca646db10766874e, type: 3}
       propertyPath: m_LocalPosition.y

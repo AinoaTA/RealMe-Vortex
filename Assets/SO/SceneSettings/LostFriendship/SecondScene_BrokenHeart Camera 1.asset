@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 596317485f5085c4da95eedb940ae762, type: 3}
-  m_Name: FirstScene;Awakening
+  m_Name: SecondScene_BrokenHeart Camera 1
   m_EditorClassIdentifier: 
-  _clampCameraX: {x: -3.28, y: 49.1}
+  _clampCameraX: {x: -24.88, y: 26.3}
   _clampCameraY: {x: 0, y: 0}
