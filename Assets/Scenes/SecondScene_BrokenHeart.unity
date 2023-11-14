@@ -1038,7 +1038,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 9.2855835, y: -8}
+  m_AnchoredPosition: {x: 9.285645, y: -8}
   m_SizeDelta: {x: -132.6497, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &493759202
@@ -2493,6 +2493,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 144940336831092900, guid: 54fd774bdfeba8441bcc10333e7490a4, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1345697090341017087, guid: 54fd774bdfeba8441bcc10333e7490a4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -6353,6 +6357,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2742994518478765177, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3369446546330015207, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6360,6 +6368,22 @@ PrefabInstance:
     - target: {fileID: 3369446546330015207, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901148458871013593, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
+      propertyPath: m_Size.x
+      value: 252.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901148458871013593, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
+      propertyPath: m_Size.y
+      value: 40.99751
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901148458871013593, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 409ee81b93cf70b429668522d0c01bdf, type: 3}
+    - target: {fileID: 4901148458871013593, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5036301811565376419, guid: 4d9448497b2bcb2448a2b62b135713d6, type: 3}
       propertyPath: m_IsActive

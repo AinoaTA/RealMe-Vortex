@@ -4,7 +4,7 @@ namespace NPC
     public class InteractableNPC : NearInteraction
     {
         [SerializeField] protected EnumsData.CharacterProfile _character;
-        
+        [SerializeField] protected string _dialogue;
         protected override void Awake()
         {
             base.Awake();
@@ -17,12 +17,11 @@ namespace NPC
                 ExitInteraction();
                 return;
             }
-
-            Debug.Log("NPC: " + _character);
+             
             GameManager.instance.GameStatus.UpdateFlow(EnumsData.GameFlow.IN_DIALOGUE);
             _interactionPanel.SetActive(false);
 
-             //GameManager.instance.StartConver(_dialogue.conversation, true);
+            GameManager.instance.StartConver(_dialogue, true);
         }
 
         public override void ExitInteraction()

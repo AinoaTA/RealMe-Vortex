@@ -79,4 +79,9 @@ public class DialogueMethodsManager : ScriptableObject
     {
         FMODUnity.RuntimeManager.PlayOneShot(eventPath);
     }
+
+    public void TrustedInElek(bool trusted) 
+    {
+        GameManager.instance.TrustedInElek = trusted;
+    }
 }

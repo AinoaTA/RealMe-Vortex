@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FirstScene_Awakening.unity
     guid: 75967332311ac8742b414903da14811b
   - enabled: 1
+    path: Assets/Scenes/ThirdScene_LostFriendship.unity
+    guid: a684ebc99a99a8342bee523c6f37b3ae
+  - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: 8a4a3564287e1bb4e9ee473bb2c727e5
   - enabled: 1

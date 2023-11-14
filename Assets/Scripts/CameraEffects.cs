@@ -16,12 +16,13 @@ namespace Cam
         private float _min = 1;
         private IEnumerator _routineVariation;
 
+
         private void Start()
         {
             if (_player == null) return;
-            ModifyVignete();
+            //ModifyVignete();
 
-            VariationVignette(0.25f);
+            //VariationVignette(0.25f);
         }
 
         public void ModifyVignete()
@@ -32,7 +33,7 @@ namespace Cam
 
         private void Update()
         {
-            if (_enableVignette)
+            if (_enableVignette && (_target != null))
                 vg.intensity.value = Mathf.Lerp(_vignetteValues.x, _vignetteValues.y, _min / Vector2.Distance(_player.position, _target.position));
         }
 

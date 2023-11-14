@@ -7,6 +7,9 @@ public class Inventory : MonoBehaviour
 
     public List<InventoryData> Items { get => _items; private set => _items = value; }
 
+    //public delegate void DelegateInventoryDot(bool show);
+    //public static DelegateInventoryDot OnInventoryAdded;
+
     [SerializeField] private List<InventoryData> _items = new();
 
     private void OnEnable()
@@ -36,7 +39,6 @@ public class Inventory : MonoBehaviour
     public void AddItem(Item item, int quantity = 1)
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/GetItem");
-
         InventoryData id = Items.Find((n) => n.Item == item);
 
         if (id == null)
@@ -47,6 +49,8 @@ public class Inventory : MonoBehaviour
         {
             id.AddQuantity(quantity);
         }
+         
+        InventoryDot.OnShow?.Invoke(true);
     }
 
     public void RemoveItem(Item item, int quantity)

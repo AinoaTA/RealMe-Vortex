@@ -51,6 +51,7 @@ MonoBehaviour:
   blocked: 0
   _pathSound: 
   _character: 1
+  _dialogue: 
 --- !u!58 &1083614369355448266
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -101,7 +102,7 @@ MonoBehaviour:
   _target: {fileID: 0}
   _minDistance: 2
   _speed: 1
-  _maxSpeed: 2
+  _maxSpeed: 4.5
   _smooth: 0.5
 --- !u!50 &4404696367316448034
 Rigidbody2D:

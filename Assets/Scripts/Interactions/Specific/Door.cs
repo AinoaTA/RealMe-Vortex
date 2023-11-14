@@ -26,7 +26,7 @@ public class Door : NearInteraction
             if (!_started)
             {   //open the event at the end of the conversation. 
                 //DialogueMethodsManager.CallBackOnEnd = delegate { _conditioner.DoEvent(); };
-                FadesController.Instance.FadeIn();
+                //FadesController.Instance.FadeIn();
                 _conditioner.DoEvent();
 
                 FMODUnity.RuntimeManager.PlayOneShot(_pathSound);
