@@ -20,13 +20,20 @@ namespace NPC
                     break;
                 case BrokenHeart.StateScene.CIGARRILLOS_INTRO:
             
-                case BrokenHeart.StateScene.MUST_ELEK_TALK:
+                case BrokenHeart.StateScene.GIVE_CIGARRILLOS:
+                    GameManager.instance.StartConver("BrokenHeart/Chuck_GiveCigarrillos", true);
+                    break;
+
+                case BrokenHeart.StateScene.FOUND_MULETA: 
+                    GameManager.instance.StartConver("BrokenHeart/Chuck_GiveMuleta", true);
                     break;
                 case BrokenHeart.StateScene.END_STATE:
                     break;
                 default:
                     break;
             }
+
+            BrokenHeart.Controller.instance.NextState();
         }
 
         public override void ExitInteraction()

@@ -50,10 +50,15 @@ public class DialogueMethodsManager : ScriptableObject
     }
 
     public void AddItem(int itemtype)
-    {
-        Debug.Log(items.GetItem(itemtype).ObjectName);
+    { 
         Inventory.instance.AddItem(items.GetItem(itemtype), 1);
     }
+
+    public void RemoveItem(Item itemtype)
+    {
+        Inventory.instance.RemoveItem(itemtype, 1);
+    }
+
 
     public void AddItem(Item itemtype)
     {

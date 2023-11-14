@@ -4,8 +4,8 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance { get; private set; }
 
-    public SceneSettings SceneSettings { get => _sceneSettings; }
-    [SerializeField] private SceneSettings _sceneSettings;
+    //public SceneSettings SceneSettings { get => _sceneSettings; }
+    //[SerializeField] private SceneSettings _sceneSettings;
 
     public UIManager UIManager { get => _uiManager; }
     [SerializeField] private UIManager _uiManager;
