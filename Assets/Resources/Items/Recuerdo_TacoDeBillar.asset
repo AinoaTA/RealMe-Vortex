@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Recuerdo_TacoDeBillar
   m_EditorClassIdentifier: 
   _objectName: Taco de Billar
-  _sprite: {fileID: 21300002, guid: c15ba1dcb835b28498cc6239dc893a2e, type: 3}
+  _sprite: {fileID: 21300000, guid: 184f0034d4070c445bbc8699ed490a89, type: 3}
   _infoText: "En mi primera cita con Chuck dej\xE9 que me ense\xF1ara a jugar al
     billar aunque yo era muy buena jugando. Quer\xEDa gustarle, as\xED que me dej\xE9
     ganar. Recuerdo que me dijo \u201Cmenos mal que est\xE1s buena, porque como jugadora
