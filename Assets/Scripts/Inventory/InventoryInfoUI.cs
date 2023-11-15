@@ -8,6 +8,7 @@ public class InventoryInfoUI : MonoBehaviour
     [SerializeField] private TMP_Text _name;
     [SerializeField] private TMP_Text _info;
     private string _empty = "";
+
     private void OnEnable()
     {
         InventoryItemUI.OnSendInfo += UpdateInfo;
@@ -29,7 +30,9 @@ public class InventoryInfoUI : MonoBehaviour
 
         _image.sprite = item.Sprite;
         _name.text = item.ObjectName;
-        _info.text = item.InfoText; 
+        _info.text = item.InfoText;
+
+        _info.alignment = item.name.Contains("Carta") ? TextAlignmentOptions.Left : TextAlignmentOptions.Center;
     }
 
     public void ResetInfo()
