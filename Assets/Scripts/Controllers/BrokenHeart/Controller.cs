@@ -47,6 +47,8 @@ namespace BrokenHeart
                     n.blocked = true;
                     n.enabled = false;
                 });
+
+                _elek.blocked = true;
             }
 
             _chuckState = StateScene.NONE;
@@ -69,6 +71,13 @@ namespace BrokenHeart
             switch (_chuckState)
             {
                 case StateScene.CIGARRILLOS_INTRO:
+
+                    _allInteractables.ToList().ForEach(n =>
+                    {
+                        n.blocked = false;
+                        n.enabled = true;
+                    });
+
                     _chuck.blocked = true;
                     _elek.blocked = true;
                     break;
@@ -106,22 +115,27 @@ namespace BrokenHeart
 
                         });
                     break;
-                case StateScene.END_STATE:
-                    break;
-                default:
-                    break;
             }
         }
 
         public void GoodEnding()
         {
+            _allInteractables.ToList().ForEach(n =>
+            {
+                n.blocked = false;
+                n.enabled = true;
+            });
+
+            _elek.blocked = true;
+            _chuck.blocked = true;
+
             GameManager.instance.StartConver("BrokenHeart/GoodEndingChuck", true);
         }
 
         public void Steps(int index)
         {
-            CodeAnimation.Animate(_elek.transform, 2, CodeAnimation.CurveType.OUT_QUAD, x:_endPoses[index].position.x - 3f);
-            CodeAnimation.Animate(_player.transform, 2, CodeAnimation.CurveType.OUT_QUAD, x: _endPoses[index].position.x  );
+            CodeAnimation.Animate(_elek.transform, 2, CodeAnimation.CurveType.OUT_QUAD, x: _endPoses[index].position.x - 3f);
+            CodeAnimation.Animate(_player.transform, 2, CodeAnimation.CurveType.OUT_QUAD, x: _endPoses[index].position.x);
         }
 
         public StateScene CurrentState() => _chuckState;
