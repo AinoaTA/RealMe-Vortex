@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7f6f7258-eef0-4c6c-9e94-3b7019d7ee58}">
+		<property name="assetPath">
+			<value>Music/Escenario_3.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>114.33795918367348</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e5833eaa-8ebf-4367-bf84-5238a62cbf81}</destination>
+		</relationship>
+	</object>
+</objects>

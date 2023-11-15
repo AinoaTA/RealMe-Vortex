@@ -13,7 +13,7 @@ namespace Menu
 
         private void Awake()
         {
-            TryGetComponent(out _type);
+            TryGetComponent(out _groups);
         }
     }
 }

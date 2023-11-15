@@ -38,6 +38,8 @@ namespace BrokenHeart
 
         private IEnumerator Start()
         {
+            FMODSpecial.instance.ChangeMusic(EnumsData.MusicScene.SCENE2);
+
             GameManager.instance.MustFollowPlayer = false;
 
             if (!_debuggin)

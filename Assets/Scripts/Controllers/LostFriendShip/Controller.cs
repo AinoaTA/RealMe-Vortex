@@ -15,6 +15,8 @@ namespace LostFriendship
 
         private void Start()
         {
+            FMODSpecial.instance.ChangeMusic(EnumsData.MusicScene.SCENE3);
+
             _gift.blocked = true;
  
             GameManager.instance.MustFollowPlayer = true;

@@ -11,20 +11,20 @@ namespace OniricFall
         [SerializeField] private float _maxScaleSize;
 
         private void Start()
-        { 
+        {
+            FMODSpecial.instance.ChangeMusic(EnumsData.MusicScene.SCENE1);
+
             DialogueManager.StartConversation("Fall");
 
             CodeAnimation.Animate(_spiral, _timeScaling, CodeAnimation.CurveType.LINEAR,
                 xScale: _maxScaleSize, yScale: _maxScaleSize,
                 onComplete:
-                delegate 
+                delegate
                 {
                     LoaderScenes.Instance.LoadScene("FirstScene_Awakening");
-                    Debug.Log("??");
-                }
-                );
+                });
 
-            FadesController.Instance.FadeIn(_timeScaling-1f, 1, 1);
+            FadesController.Instance.FadeIn(_timeScaling - 1f, 1, 1);
         }
 
         private void Update()
