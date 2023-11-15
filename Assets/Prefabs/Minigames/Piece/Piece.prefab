@@ -51,9 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35faaf2d6768ea4b843891d338ec66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pieceCorrect: 0
   _sp: {fileID: 974436110242425820}
-  _clampY: {x: -4.25, y: 4.25}
-  _clampX: {x: -6.35, y: 6.35}
 --- !u!61 &5544125733501061967
 BoxCollider2D:
   m_ObjectHideFlags: 0
