@@ -33,13 +33,13 @@ namespace Player
 
             if (detections.Count == 0) return;
 
-            Debug.Log("before: "+detections.Count);
+            //Debug.Log("before: "+detections.Count);
             for (int i = 0; i < detections.Count; i++)
             {
                 if (detections[i].GetComponent<Interactable>().blocked)
                     detections.Remove(detections[i]);
             }
-            Debug.Log("after: "+detections.Count);
+            //Debug.Log("after: "+detections.Count);
 
             if (detections.Count == 0) return;
 

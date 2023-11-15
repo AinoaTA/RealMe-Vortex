@@ -1208,14 +1208,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0962d4aac2aae948aeaaaa8fbbffb0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keyUnlocked: 1
   _allInteractables:
   - {fileID: 786794548}
   - {fileID: 983247385}
   - {fileID: 14734553}
   - {fileID: 1467650356}
   - {fileID: 752293820}
-  _debuggin: 1
+  _debuggin: 0
+  _keyUnlocked: 0
 --- !u!4 &1785996722
 Transform:
   m_ObjectHideFlags: 0

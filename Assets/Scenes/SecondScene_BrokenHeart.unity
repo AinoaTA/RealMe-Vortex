@@ -399,7 +399,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &854348984
+--- !u!1001 &947558823
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -407,10 +407,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 144940336831092900, guid: 54fd774bdfeba8441bcc10333e7490a4, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1345697090341017087, guid: 54fd774bdfeba8441bcc10333e7490a4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -419,21 +415,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1345697090341017087, guid: 54fd774bdfeba8441bcc10333e7490a4, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2598332185606174446, guid: 54fd774bdfeba8441bcc10333e7490a4, type: 3}
-      propertyPath: m_Size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3338180767530966776, guid: 54fd774bdfeba8441bcc10333e7490a4, type: 3}
       propertyPath: _cam
       value: 
       objectReference: {fileID: 568002909}
     - target: {fileID: 7252653919954398745, guid: 54fd774bdfeba8441bcc10333e7490a4, type: 3}
       propertyPath: m_Name
-      value: GameManager
+      value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 8831934412779317304, guid: 54fd774bdfeba8441bcc10333e7490a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2396,8 +2384,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c58dd39de56cf1418063dcb2c5b2b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allInteractables: []
-  _debuggin: 1
+  _allInteractables:
+  - {fileID: 1718048134}
+  - {fileID: 1289139495}
+  - {fileID: 1155372385}
+  - {fileID: 328009539}
+  _debuggin: 0
   _chuck: {fileID: 1254100037638741747}
   _chuckState: 0
   _player: {fileID: 1628595184}
@@ -2905,7 +2897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4399486297943388958, guid: 4fe85450044b2ea45a9e094064519e79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.3
+      value: -32.9
       objectReference: {fileID: 0}
     - target: {fileID: 6061334604439666200, guid: 4fe85450044b2ea45a9e094064519e79, type: 3}
       propertyPath: _settings
@@ -3046,7 +3038,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 34ef16cf6245ac449b5cb5360b7be33d, type: 2}
     - target: {fileID: 2580524151068754860, guid: b9556b220d0955a4ca646db10766874e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.72
+      value: -20.19
       objectReference: {fileID: 0}
     - target: {fileID: 2580524151068754860, guid: b9556b220d0955a4ca646db10766874e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3111,11 +3103,11 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 7373199166106910966, guid: 7b1fbd87709746d4da01a26e57bc4bb5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13
+      value: -24.07
       objectReference: {fileID: 0}
     - target: {fileID: 7373199166106910966, guid: 7b1fbd87709746d4da01a26e57bc4bb5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.83
+      value: -2.57
       objectReference: {fileID: 0}
     - target: {fileID: 7373199166106910966, guid: 7b1fbd87709746d4da01a26e57bc4bb5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3276,5 +3268,5 @@ SceneRoots:
   - {fileID: 502498082740647959}
   - {fileID: 1785996722}
   - {fileID: 1758127025}
-  - {fileID: 854348984}
   - {fileID: 1254100037638741743}
+  - {fileID: 947558823}

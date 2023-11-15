@@ -30,13 +30,17 @@ namespace Player
         {
             _movement = dir;
 
-            if (GameManager.instance.GameStatus == null) return;
-            if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY) return;
+            if (GameManager.instance.GameStatus.Status != EnumsData.GameFlow.GAMEPLAY)
+            {
+                _playerAnimator.SetBool("Walking", false);
+            }
+            else
+            {
+                if (dir.magnitude != 0)
+                    _playerAnimator.transform.parent.localScale = dir.x > 0 ? new(-1, 1, 1) : Vector3.one;
 
-            _playerAnimator.SetBool("Walking", dir.magnitude != 0);
-
-            if (dir.magnitude != 0)
-                _playerAnimator.transform.parent.localScale = dir.x > 0 ? new(-1, 1, 1) : Vector3.one;
+                _playerAnimator.SetBool("Walking", dir.magnitude != 0);
+            }
         }
 
         #endregion
