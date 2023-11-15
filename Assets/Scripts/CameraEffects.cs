@@ -16,20 +16,25 @@ namespace Cam
         private float _min = 1;
         private IEnumerator _routineVariation;
 
-
+        private float _dfValueVG;
         private void Start()
         {
             if (_player == null) return;
+
+            volume.profile.TryGetSettings(out vg);
+            _dfValueVG = vg.intensity;
+
+
+            //VariationVignette(0.2f);
             //ModifyVignete();
 
             //VariationVignette(0.25f);
         }
 
-        public void ModifyVignete()
-        {
-            volume.profile.TryGetSettings(out vg);
-            vg.intensity.value = 0.5f;
-        }
+        //public void ModifyVignete()
+        //{ 
+        //    vg.intensity.value = 0.5f;
+        //}
 
         private void Update()
         {
@@ -63,7 +68,7 @@ namespace Cam
             StartCoroutine(_routineVariation = VariationRoutine(timesBetweenRep));
         }
 
-        IEnumerator VariationRoutine(float timeBetweenRep = 0.5f, int rep = 5)
+        IEnumerator VariationRoutine(float timeBetweenRep = 0.5f, int rep = 1)
         {
             int times = 0;
             float val = vg.intensity.value;
@@ -74,16 +79,17 @@ namespace Cam
                 float t = 0;
                 while (t < timeBetweenRep)
                 {
-                    vg.intensity.value = Mathf.Lerp(val, overMid ? 0.2f : 0.7f, t / 0.5f);
+                    vg.intensity.value = Mathf.Lerp(val, 0.7f, t / timeBetweenRep);
                     t += Time.deltaTime;
                     yield return null;
                 }
 
                 yield return null;
                 t = 0;
+                val = vg.intensity.value;
                 while (t < timeBetweenRep)
                 {
-                    vg.intensity.value = Mathf.Lerp(overMid ? 0.2f : 0.7f, val, t / 0.5f);
+                    vg.intensity.value = Mathf.Lerp(val, _dfValueVG, t / timeBetweenRep);
                     t += Time.deltaTime;
                     yield return null;
                 }

@@ -315,6 +315,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1781466287032051836, guid: b9556b220d0955a4ca646db10766874e, type: 3}
   m_PrefabInstance: {fileID: 2352112854190507381}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &568002912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 424727456517083272, guid: b9556b220d0955a4ca646db10766874e, type: 3}
+  m_PrefabInstance: {fileID: 2352112854190507381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568002909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615ad77ac28e1144cbb6f8a7cdfbc8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &568002913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9205027911655240349, guid: b9556b220d0955a4ca646db10766874e, type: 3}
+  m_PrefabInstance: {fileID: 2352112854190507381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568002909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 049c54a52c24fe24992ae58cb0d8214d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &721986855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2440,6 +2462,42 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - guid: 38c2bce8-5188-4199-8fec-a205715ab05e
+    onExecute:
+      m_PersistentCalls:
+        m_Calls: []
+  - guid: b3db8d0a-b502-4422-99f6-51f5d60b4f09
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 568002913}
+          m_TargetAssemblyTypeName: Cam.CameraEffects, Assembly-CSharp
+          m_MethodName: VariationVignette
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 95a64daf-b824-4524-8abb-32100e294ec0
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 568002912}
+          m_TargetAssemblyTypeName: Cam.CameraShake, Assembly-CSharp
+          m_MethodName: SoftShake
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1758127025
 Transform:
   m_ObjectHideFlags: 0
@@ -2509,7 +2567,7 @@ MonoBehaviour:
   - {fileID: 1289139495}
   - {fileID: 1155372385}
   - {fileID: 328009539}
-  _debuggin: 0
+  _debuggin: 1
   _chuck: {fileID: 1254100037638741747}
   _chuckState: 0
   _player: {fileID: 1628595184}
@@ -3038,7 +3096,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 608075671058869841, guid: 77e2be2c657446040b5e3bf6905e0a3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.37
+      value: 21.44
       objectReference: {fileID: 0}
     - target: {fileID: 608075671058869841, guid: 77e2be2c657446040b5e3bf6905e0a3e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3084,6 +3142,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 6514751420720565347, guid: 77e2be2c657446040b5e3bf6905e0a3e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.46
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3108,6 +3170,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 424727456517083272, guid: b9556b220d0955a4ca646db10766874e, type: 3}
+      propertyPath: _xSoftMovement.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 424727456517083272, guid: b9556b220d0955a4ca646db10766874e, type: 3}
+      propertyPath: _xSoftMovement.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 424727456517083272, guid: b9556b220d0955a4ca646db10766874e, type: 3}
+      propertyPath: _ySoftMovement.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 424727456517083272, guid: b9556b220d0955a4ca646db10766874e, type: 3}
+      propertyPath: _ySoftMovement.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1781466287032051836, guid: b9556b220d0955a4ca646db10766874e, type: 3}
       propertyPath: m_Name
       value: CameraFollow

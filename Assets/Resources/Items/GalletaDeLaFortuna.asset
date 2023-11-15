@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GalletaDeLaFortuna
   m_EditorClassIdentifier: 
   _objectName: Galleta de la Fortuna
-  _sprite: {fileID: 21300002, guid: c15ba1dcb835b28498cc6239dc893a2e, type: 3}
+  _sprite: {fileID: 21300000, guid: 4bbb50e260fb87d4c9f483264ff5b3e0, type: 3}
   _infoText: Restos de una galleta de la Fortuna.
