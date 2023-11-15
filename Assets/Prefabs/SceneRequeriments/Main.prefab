@@ -305,27 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ded4ae687aa92747a7a6f7c8e678e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _items:
-  - _item: {fileID: 11400000, guid: e91239df7cbe35445bc68af7ce7be739, type: 2}
-    _quantity: 0
-  - _item: {fileID: 11400000, guid: 41f2bbbcd3006414e9c3b87d03db6aff, type: 2}
-    _quantity: 0
-  - _item: {fileID: 11400000, guid: 2d8f55980223c6843a52656923ede82d, type: 2}
-    _quantity: 0
-  - _item: {fileID: 11400000, guid: 7a12380169b98254d92d55ccea754b34, type: 2}
-    _quantity: 0
-  - _item: {fileID: 11400000, guid: ddca5145e93682c4396bd71b02368f46, type: 2}
-    _quantity: 0
-  - _item: {fileID: 11400000, guid: 60da8a96f2d5ddb47b7f404a256b1807, type: 2}
-    _quantity: 0
-  - _item: {fileID: 11400000, guid: 3413a83e3e39f0b4c974429e3c8dd0ff, type: 2}
-    _quantity: 0
-  - _item: {fileID: 11400000, guid: 3221f56f4bf82614eae06f996111a5cd, type: 2}
-    _quantity: 0
-  - _item: {fileID: 11400000, guid: 2cad462eef7bd68459c68bee05e0bedc, type: 2}
-    _quantity: 0
-  - _item: {fileID: 11400000, guid: 80f7553b13328db48ad054702f71fc8c, type: 2}
-    _quantity: 0
+  _items: []
 --- !u!1 &7093270616530962176
 GameObject:
   m_ObjectHideFlags: 0
