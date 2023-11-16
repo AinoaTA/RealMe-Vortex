@@ -11,8 +11,7 @@ namespace Awakening
 
         [SerializeField] private List<Interactable> _allInteractables = new();
         [SerializeField] private bool _debuggin;
-
-
+         
         public bool KeyUnlocked { get => _keyUnlocked; private set => _keyUnlocked = value; }
         [SerializeField] private bool _keyUnlocked = false;
 
@@ -56,6 +55,7 @@ namespace Awakening
         {
             _keyUnlocked = true;
         }
+
 
         private IEnumerator StartRoutine()
         {

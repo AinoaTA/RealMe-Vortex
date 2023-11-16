@@ -53,7 +53,7 @@ MonoBehaviour:
   blocked: 0
   _pathSound: 
   _character: 1
-  _dialogue: 
+  _dialogue: Elek_intro
 --- !u!58 &1083614369355448266
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -190,14 +190,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e070b706525e44d89590a7ee3095ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _xMinAmplitude: 0.01
+  _xMinAmplitude: -0.05
   _xMaxAmplitude: 0.05
-  _yMinAmplitude: 0.01
+  _yMinAmplitude: -0.05
   _yMaxAmplitude: 0.05
   _xSpeed: 0.01
   _ySpeed: 0.01
-  _canRotate: 0
-  _maxRotation: 15
+  _canRotate: 1
+  _maxRotation: 2
   _rotationSpeed: 0.5
   Enabled: 1
 --- !u!1 &8825723211339889014
