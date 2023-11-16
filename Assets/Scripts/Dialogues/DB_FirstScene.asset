@@ -227,7 +227,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
-      value: True
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -1016,6 +1016,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 32409e4d-bbe9-42c0-a01b-a6683c2743ab
         type: 0
         typeString: 
       conversationID: 3
@@ -8624,7 +8628,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 163
-        y: 388
+        y: 386.86365
         width: 160
         height: 30
     - id: 7
@@ -8736,7 +8740,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 163
-        y: 488
+        y: 486.86365
         width: 160
         height: 30
     - id: 9
@@ -8837,7 +8841,7 @@ MonoBehaviour:
       - originConversationID: 16
         originDialogueID: 10
         destinationConversationID: 16
-        destinationDialogueID: 11
+        destinationDialogueID: 41
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -8874,9 +8878,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Aquello me pareci\xF3 tan rom\xE1ntico\u2026 como el final de una
-          pel\xEDcula. No se separ\xF3 de m\xED en toda la noche. Esa fue nuestra
-          primera cita, por llamarla de alguna forma."
+        value: Esa fue nuestra primera cita, por llamarla de alguna forma.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -8904,8 +8906,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 163
-        y: 638
+        x: 169.57368
+        y: 650.26984
         width: 160
         height: 30
     - id: 12
@@ -8959,8 +8961,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 163
-        y: 688
+        x: 161.93619
+        y: 686.93616
         width: 160
         height: 30
     - id: 13
@@ -9043,8 +9045,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "Intentaba controlar a d\xF3nde iba, mis redes sociales\u2026 Lleg\xF3
-          a exigirme las contrase\xF1as de todas mis cuentas. Y yo ced\xED. Ced\xED
-          en todo. Me aterraba que me dejara."
+          a exigirme las contrase\xF1as de todas mis cuentas. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -9062,7 +9063,7 @@ MonoBehaviour:
       - originConversationID: 16
         originDialogueID: 14
         destinationConversationID: 16
-        destinationDialogueID: 15
+        destinationDialogueID: 42
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -9100,8 +9101,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "Un d\xEDa se present\xF3 en mi trabajo y mont\xF3 una escena porque
-          me vio hablando con un cliente. Se puso como un loco a insultarme y a echarme
-          en cara un mont\xF3n de tonter\xEDas."
+          me vio hablando con un cliente. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -9119,7 +9119,7 @@ MonoBehaviour:
       - originConversationID: 16
         originDialogueID: 15
         destinationConversationID: 16
-        destinationDialogueID: 16
+        destinationDialogueID: 43
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -9129,8 +9129,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 157.35486
-        y: 850.0968
+        x: 161.61017
+        y: 859.67126
         width: 160
         height: 30
     - id: 16
@@ -9519,7 +9519,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 154.93549
-        y: 1231.5483
+        y: 1230.5173
         width: 160
         height: 30
     - id: 23
@@ -9907,7 +9907,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 155.78294
-        y: 1581.5483
+        y: 1580.2324
         width: 160
         height: 30
     - id: 30
@@ -10074,55 +10074,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 154.91304
         y: 1725.4614
-        width: 160
-        height: 30
-    - id: 33
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 16
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 160
-        y: 80
         width: 160
         height: 30
     - id: 34
@@ -10517,9 +10468,176 @@ MonoBehaviour:
         y: 2076.331
         width: 160
         height: 30
+    - id: 41
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Aquello me pareci\xF3 tan rom\xE1ntico\u2026 como el final de una
+          pel\xEDcula. No se separ\xF3 de m\xED en toda la noche. "
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 16
+        originDialogueID: 41
+        destinationConversationID: 16
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 334.4216
+        y: 602.4826
+        width: 160
+        height: 30
+    - id: 42
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Y yo ced\xED. Ced\xED en todo. Me aterraba que me dejara."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 16
+        originDialogueID: 42
+        destinationConversationID: 16
+        destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 149.97664
+        y: 830.5532
+        width: 160
+        height: 30
+    - id: 43
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Se puso como un loco a insultarme y a echarme en cara un mont\xF3n
+          de tonter\xEDas."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 16
+        originDialogueID: 43
+        destinationConversationID: 16
+        destinationDialogueID: 16
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 163.73782
+        y: 896.9053
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1.7391357, y: 1912.8247}
-    canvasZoom: 1.1499999
+    canvasScrollPosition: {x: 0, y: 204.05109}
+    canvasZoom: 0.73000026
   - id: 17
     fields:
     - title: Title
@@ -11710,7 +11828,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "Es Fei. Era mi mejor amiga. Se mud\xF3 con sus padres y no volvimos
-          a vernos nunca m\xE1s.\r\n"
+          a vernos nunca m\xE1s.\r"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -12485,8 +12603,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 682.02997}
-    canvasZoom: 0.7900002
+    canvasScrollPosition: {x: 0, y: 439.9851}
+    canvasZoom: 0.85000014
   - id: 22
     fields:
     - title: Title
@@ -13979,7 +14097,19 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
+            m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
+            m_MethodName: AddItem
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 11400000, guid: 695656a3761cee947aa97bf538370566, type: 2}
+              m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 160
@@ -14206,7 +14336,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 280
+        y: 278.82352
         width: 160
         height: 30
     - id: 6
@@ -14260,7 +14390,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
+        x: 161.17645
         y: 330
         width: 160
         height: 30
@@ -14514,6 +14644,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: a02baa85-b391-4b62-bf73-e2d1618bcf26
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 26
       isRoot: 0
       isGroup: 0
@@ -14526,7 +14660,19 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
+            m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
+            m_MethodName: UpdateToGameplayState
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 160
@@ -14535,7 +14681,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7000003
+    canvasZoom: 0.85000014
   - id: 27
     fields:
     - title: Title
@@ -15518,7 +15664,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
+        x: 160.94342
         y: 130
         width: 160
         height: 30
@@ -15631,6 +15777,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: b8993270-6de6-4fc3-98d9-05190ca355e9
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 29
       isRoot: 0
       isGroup: 0
@@ -15739,6 +15889,10 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Sequence
         value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 1d7ebf18-cb48-4719-bc69-3164d497653b
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 29
@@ -16807,6 +16961,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: ad6915bd-7a1f-4414-bb47-f9fb3935500e
+        type: 0
+        typeString: 
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -16954,7 +17112,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 497.54382}
+    canvasScrollPosition: {x: 44.1839, y: 126.21359}
     canvasZoom: 1.03
   - id: 32
     fields:
@@ -18049,6 +18207,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: ecb07f90-173b-4262-bf16-9c5a11c62a8b
+        type: 0
+        typeString: 
       conversationID: 34
       isRoot: 0
       isGroup: 0
@@ -18196,7 +18358,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 171.134}
+    canvasScrollPosition: {x: 0, y: 135.05151}
     canvasZoom: 0.97
   - id: 35
     fields:
@@ -18330,6 +18492,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 23969a4d-ed17-4084-a028-12277c4e585e
+        type: 0
+        typeString: 
       conversationID: 35
       isRoot: 0
       isGroup: 0
@@ -18352,7 +18518,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 147.91208
-        y: 145.93408
+        y: 144.90315
         width: 160
         height: 30
     - id: 2
@@ -18410,8 +18576,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 144.61539
-        y: 237.69232
+        x: 147.70819
+        y: 217.07376
         width: 160
         height: 30
     - id: 3
@@ -18445,6 +18611,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 7e394490-409e-4ef6-afb3-ec4bd85de201
+        type: 0
+        typeString: 
       conversationID: 35
       isRoot: 0
       isGroup: 0
@@ -18559,6 +18729,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 62187518-91a2-410e-b9b7-382fa185d174
+        type: 0
+        typeString: 
       conversationID: 35
       isRoot: 0
       isGroup: 0
@@ -18581,7 +18755,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 145.61539
-        y: 386.69232
+        y: 385.66138
         width: 160
         height: 30
     - id: 6
@@ -18674,6 +18848,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 1ce05c35-1348-4a72-8e24-ab362cbc6f8e
+        type: 0
+        typeString: 
       conversationID: 35
       isRoot: 0
       isGroup: 0
@@ -18729,6 +18907,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 5b115912-7608-4473-8a40-8e08413c4b68
+        type: 0
+        typeString: 
       conversationID: 35
       isRoot: 0
       isGroup: 0
@@ -18763,12 +18945,24 @@ MonoBehaviour:
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
+              m_StringArgument: ThirdScene_LostFriendship
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
+            m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
+            m_MethodName: FadeIn
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 145.61539
+        x: 147.6172
         y: 536.69214
         width: 160
         height: 30
@@ -18832,12 +19026,12 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 10.209156, y: 0}
+    canvasZoom: 1.03
   - id: 36
     fields:
     - title: Title
-      value: BrokenHeart/GiveMuleta
+      value: BrokenHeart/Chuck_GiveMuleta
       type: 0
       typeString: CustomFieldType_Text
     - title: Description
@@ -19144,6 +19338,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 9f4f967a-1cf9-42a4-88f9-8cf5e18f2e23
+        type: 0
+        typeString: 
       conversationID: 36
       isRoot: 0
       isGroup: 0
@@ -19255,6 +19453,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 62a0f91f-3c5a-4147-a5c5-6016e4ed153c
+        type: 0
+        typeString: 
       conversationID: 36
       isRoot: 0
       isGroup: 0
@@ -19366,6 +19568,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 1686db2c-e597-48aa-b52e-9bf62d89c058
+        type: 0
+        typeString: 
       conversationID: 36
       isRoot: 0
       isGroup: 0
@@ -19477,6 +19683,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: d7fb153b-adb9-4962-bc9e-c164b2af9e68
+        type: 0
+        typeString: 
       conversationID: 36
       isRoot: 0
       isGroup: 0
@@ -19645,6 +19855,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 32114046-e675-4532-aa7d-62b5b5279f95
+        type: 0
+        typeString: 
       conversationID: 36
       isRoot: 0
       isGroup: 0
@@ -19756,6 +19970,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 1ecac4be-a110-40ae-b07c-ec5cbaa3fdcf
+        type: 0
+        typeString: 
       conversationID: 36
       isRoot: 0
       isGroup: 0
@@ -19835,8 +20053,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 32.900833}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 63.850624, y: 199.03836}
+    canvasZoom: 1.03
   - id: 37
     fields:
     - title: Title
@@ -20044,7 +20262,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
+        x: 161.0989
         y: 130
         width: 160
         height: 30

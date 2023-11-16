@@ -30,9 +30,7 @@ namespace BrokenHeart
                     break;
                 case StateScene.ELEK_TALKTO_LOGAN:
                     GameManager.instance.StartConver("BrokenHeart/Elek_Talking2", true);
-                    break;
-                case StateScene.BAD_TALKED:
-                    break;
+                    break; 
                 case StateScene.ELEK_COMES_TO_HELP:
                     break;
                 case StateScene.END_STATE:

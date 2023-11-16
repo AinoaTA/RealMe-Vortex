@@ -12,29 +12,25 @@ namespace Cam
 
         [SerializeField] private bool _enableVignette;
         [SerializeField] private Vector2 _vignetteValues = new(0.1f, 0.8f);
+
         private Vignette vg;
+        private ChromaticAberration ca;
+        private ColorGrading cg;
         private float _min = 1;
         private IEnumerator _routineVariation;
 
         private float _dfValueVG;
+
         private void Start()
         {
             if (_player == null) return;
 
             volume.profile.TryGetSettings(out vg);
-            _dfValueVG = vg.intensity;
+            volume.profile.TryGetSettings(out ca);
+            volume.profile.TryGetSettings(out cg);
 
-
-            //VariationVignette(0.2f);
-            //ModifyVignete();
-
-            //VariationVignette(0.25f);
-        }
-
-        //public void ModifyVignete()
-        //{ 
-        //    vg.intensity.value = 0.5f;
-        //}
+            _dfValueVG = 0.255f; 
+        } 
 
         private void Update()
         {
@@ -68,6 +64,22 @@ namespace Cam
             StartCoroutine(_routineVariation = VariationRoutine(timesBetweenRep));
         }
 
+        public void VariationVignette(int reps)
+        {
+            if (_routineVariation != null) StopCoroutine(_routineVariation);
+            StartCoroutine(_routineVariation = VariationRoutine(0.1f, reps));
+        }
+
+        public void ChromaticAberration(float value)
+        {
+            ca.intensity.value = value;
+        }
+
+        public void Saturation(float value)
+        {
+            cg.saturation.value = -value;
+        }
+
         IEnumerator VariationRoutine(float timeBetweenRep = 0.5f, int rep = 1)
         {
             int times = 0;
@@ -98,5 +110,12 @@ namespace Cam
             }
         }
         #endregion
+
+        public void ResetEffects()
+        {
+            ca.intensity.value = 0;
+            cg.saturation.value = 0;
+            vg.intensity.value = _dfValueVG;
+        }
     }
 }

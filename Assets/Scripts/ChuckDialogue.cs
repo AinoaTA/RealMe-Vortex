@@ -28,9 +28,7 @@ namespace NPC
                     break;
                 case BrokenHeart.StateScene.FOUND_MULETA:
                     GameManager.instance.StartConver("BrokenHeart/Chuck_GiveMuleta", true);
-                    break;
-                case BrokenHeart.StateScene.BAD_TALKED:
-                    break;
+                    break; 
                 default:
                     break;
             } 

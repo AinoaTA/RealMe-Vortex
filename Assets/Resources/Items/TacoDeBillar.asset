@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectName: Taco de Billar
   _sprite: {fileID: 21300000, guid: 184f0034d4070c445bbc8699ed490a89, type: 3}
-  _infoText: Taco bastante largo
+  _infoText: "Podr\xEDa ser \xFAtil como muleta."

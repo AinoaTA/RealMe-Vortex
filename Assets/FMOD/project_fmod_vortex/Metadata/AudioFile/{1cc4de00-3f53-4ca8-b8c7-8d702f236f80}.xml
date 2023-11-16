@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1cc4de00-3f53-4ca8-b8c7-8d702f236f80}">
+		<property name="assetPath">
+			<value>Music/sfx_earthcuake.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>13.557551020408162</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e5833eaa-8ebf-4367-bf84-5238a62cbf81}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -365,7 +365,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ThirdScene_LostFriendship
+          m_StringArgument: SecondScene_BrokenHeart
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 214611795fa523744945c3cc8a791400, type: 2}
+        m_TargetAssemblyTypeName: DialogueMethodsManager, Assembly-CSharp
+        m_MethodName: FadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SecondScene_BrokenHeart
           m_BoolArgument: 0
         m_CallState: 2
   _requiredObjects: {fileID: 11400000, guid: 6e64199c459746d4eab3f2a43a7da8f4, type: 2}
@@ -1155,6 +1167,22 @@ MonoBehaviour:
         - m_Target: {fileID: 1785996721}
           m_TargetAssemblyTypeName: Awakening.Controller, Assembly-CSharp
           m_MethodName: IsKeyUnlocked
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 32409e4d-bbe9-42c0-a01b-a6683c2743ab
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1785996721}
+          m_TargetAssemblyTypeName: Awakening.Controller, Assembly-CSharp
+          m_MethodName: UnlockInteractables
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

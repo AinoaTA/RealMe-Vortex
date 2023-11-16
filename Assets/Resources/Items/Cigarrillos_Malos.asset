@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectName: Caja de cigarrillos
   _sprite: {fileID: 21300000, guid: 5f0131120cccc87478b267bf772a02be, type: 3}
-  _infoText: Marca que odia Chuck
+  _infoText: Recuerdo que Chuck odiaba esta marca .

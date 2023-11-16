@@ -89,4 +89,9 @@ public class DialogueMethodsManager : ScriptableObject
     {
         GameManager.instance.TrustedInElek = trusted;
     }
+
+    public void ExitGame() 
+    {
+        Application.Quit();
+    }
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 596317485f5085c4da95eedb940ae762, type: 3}
   m_Name: ThirdScene_LostFriendship
   m_EditorClassIdentifier: 
-  _clampCameraX: {x: -24.88, y: 26.3}
+  _clampCameraX: {x: -26.3, y: 23.3}
   _clampCameraY: {x: 0, y: 0}

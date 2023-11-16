@@ -18,10 +18,13 @@ namespace LostFriendship
             FMODSpecial.instance.ChangeMusic(EnumsData.MusicScene.SCENE3);
 
             _gift.blocked = true;
- 
+            _lastDoor.gameObject.SetActive(false);
             GameManager.instance.MustFollowPlayer = true;
+
             if(!_debuggin)
             GameManager.instance.StartConver("LostFriendship/Intro", true);
+
+            FadesController.Instance.FadeOut();
         }
 
         public void SecondPhase()
@@ -35,6 +38,8 @@ namespace LostFriendship
 
             _initDoor.blocked = true;
             _initDoor.enabled = false;
+
+            //_lastDoor.gameObject.SetActive(true);
         }
 
         public void UnlockGift()

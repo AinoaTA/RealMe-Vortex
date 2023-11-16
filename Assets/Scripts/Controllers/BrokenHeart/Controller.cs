@@ -11,8 +11,7 @@ namespace BrokenHeart
         MUST_ELEK_TALK, GIVE_CIGARRILLOS,
         FIND_PILLS, FOUND_PILLS,
         FIND_MULETA, ELEK_TALKTO_LOGAN,
-        FOUND_MULETA, GIVEN_MULETA,
-        BAD_TALKED, ELEK_COMES_TO_HELP,
+        FOUND_MULETA, ELEK_COMES_TO_HELP,
 
         END_STATE
     }
@@ -30,7 +29,8 @@ namespace BrokenHeart
         [SerializeField] private Transform _elekPos1;
 
         [SerializeField] private Transform[] _endPoses;
-
+        [SerializeField] private Transform _enredaderas;
+        [SerializeField] private SpriteRenderer[] _enredaderasSP;
         private void Awake()
         {
             instance = this;
@@ -38,6 +38,8 @@ namespace BrokenHeart
 
         private IEnumerator Start()
         {
+            FadesController.Instance.FadeOut();
+
             FMODSpecial.instance.ChangeMusic(EnumsData.MusicScene.SCENE2);
 
             GameManager.instance.MustFollowPlayer = false;
@@ -124,8 +126,8 @@ namespace BrokenHeart
         {
             _allInteractables.ToList().ForEach(n =>
             {
-                n.blocked = false;
-                n.enabled = true;
+                n.blocked = true;
+                n.enabled = false;
             });
 
             _elek.blocked = true;
@@ -136,8 +138,20 @@ namespace BrokenHeart
 
         public void Steps(int index)
         {
-            CodeAnimation.Animate(_elek.transform, 2, CodeAnimation.CurveType.OUT_QUAD, x: _endPoses[index].position.x - 3f);
-            CodeAnimation.Animate(_player.transform, 2, CodeAnimation.CurveType.OUT_QUAD, x: _endPoses[index].position.x);
+            CodeAnimation.Animate(_elek.transform, 2.5f, CodeAnimation.CurveType.OUT_QUAD, x: _endPoses[index].position.x - 3f);
+            CodeAnimation.Animate(_player.transform, 2.5f, CodeAnimation.CurveType.OUT_QUAD, x: _endPoses[index].position.x);
+        }
+
+        public void EnableEnredaderas()
+        {
+            Vector3 pos = _player.position;
+            pos.y = _enredaderas.position.y;
+            _enredaderas.position = pos;
+
+            foreach (var item in _enredaderasSP)
+            {
+                CodeAnimation.BlendColor(item, 3, CodeAnimation.CurveType.IN_OUT_SINE, a: 1);
+            }
         }
 
         public StateScene CurrentState() => _chuckState;

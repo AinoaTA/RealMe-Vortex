@@ -511,7 +511,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ddca5145e93682c4396bd71b02368f46, type: 2}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 8a45f5b4a1cd7324c87d83ed1ea8ff40, type: 2}
+  - {fileID: 11400000, guid: 695656a3761cee947aa97bf538370566, type: 2}
+  - {fileID: 11400000, guid: 920450d09b181a44489c1c0bd8224261, type: 2}
+  - {fileID: 11400000, guid: 0a697d78cd8fdad4c8191537bd1b4d76, type: 2}
+  - {fileID: 11400000, guid: bfe6a481e83b9194daebda76f222d1a8, type: 2}
+  - {fileID: 11400000, guid: ddca5145e93682c4396bd71b02368f46, type: 2}
   _openMinigame: {fileID: 0}
   _minigame: {fileID: 0}
 --- !u!1 &1154161147886488330

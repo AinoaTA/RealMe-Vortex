@@ -22,6 +22,7 @@ namespace Cam
         #region Shakes
         public void SoftShake()
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Earthquake");
             CodeAnimation.Animate(transform, _time, CodeAnimation.CurveType.SOFT_LOOP, x: transform.position.x + Random.Range(_xSoftMovement.x, _xSoftMovement.y),
                 y: transform.position.y + Random.Range(_ySoftMovement.x, _ySoftMovement.y), iterations: _iterations);
 
@@ -30,6 +31,7 @@ namespace Cam
 
         public void LongShake() 
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Earthquake");
             CodeAnimation.Animate(transform, _time, CodeAnimation.CurveType.SOFT_LOOP, x: transform.position.x + Random.Range(_xSoftMovement.x, _xSoftMovement.y),
                     y: transform.position.y + Random.Range(_ySoftMovement.x, _ySoftMovement.y), iterations: _iterations*2);
         }
